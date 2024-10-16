@@ -2,6 +2,8 @@ import { storefront } from '@site/utilities/storefront';
 import { NextImage, NextLink, useState, useAsyncFn, DataProps } from '@site/utilities/deps';
 import { Button } from '@site/snippets';
 import { Money } from '@shopify/hydrogen-react';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 export async function fetchProductListSection(cursor?: string) {
   const { products } = await storefront.query({
@@ -42,13 +44,34 @@ export function ProductListSection(props: DataProps<typeof fetchProductListSecti
   const lastCursor = lastPage.edges[lastPage.edges.length - 1].cursor;
   const hasNextPage = lastPage.pageInfo.hasNextPage;
 
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    // 进入动画
+    gsap.fromTo(
+      sectionRef.current,
+      { yPercent: 100, opacity: 0 },
+      { yPercent: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+    );
+
+    // 离开动画
+    return () => {
+      gsap.to(sectionRef.current, {
+        yPercent: -100,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.in',
+      });
+    };
+  }, []);
+
   const [loader, load] = useAsyncFn(async () => {
     const productList = await fetchProductListSection(lastCursor);
     setPages([...pages, productList]);
   }, [lastCursor]);
 
   return (
-    <section>
+    <section ref={sectionRef}>
       <h2 className="sr-only">Products</h2>
       <div className="mb-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         {pages
