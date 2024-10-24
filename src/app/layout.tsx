@@ -1,7 +1,7 @@
-import '@site/assets/style.css';
-import { RootProvider } from '@site/components/providers';
-import { HeaderSection } from '@site/features/layout/components';
-import { createMetadata } from '@site/lib/seo';
+import '@/assets/style.css';
+import { RootProvider } from '@/components/providers';
+import { HeaderSection } from '@/features/layout/components';
+import { createMetadata } from '@/lib/seo';
 
 export const metadata = createMetadata();
 

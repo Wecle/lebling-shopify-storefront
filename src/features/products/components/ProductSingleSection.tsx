@@ -1,9 +1,9 @@
 'use client';
 
 import { ProductPrice, AddToCartButton, ProductProvider } from '@shopify/hydrogen-react';
-import { NextImage, DataProps, useVariantSelector } from '@site/lib/deps';
-import { fetchProductSingleSection } from '@site/lib/api/shopify';
-import { Button } from '@site/components/shared';
+import { NextImage, DataProps, useVariantSelector } from '@/lib/deps';
+import { fetchProductSingleSection } from '@/lib/api/shopify';
+import { Button } from '@/components/shared';
 
 export function ProductSingleSection(props: DataProps<typeof fetchProductSingleSection>) {
   const { variantId, options, selectOption } = useVariantSelector(props.data);

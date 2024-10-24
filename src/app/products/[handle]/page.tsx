@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import { createMetadata } from '@site/lib/seo';
-import { fetchProductSingleSection } from '@site/lib/api/shopify';
-import { ProductSingleSection } from '@site/features/products/components';
+import { createMetadata } from '@/lib/seo';
+import { fetchProductSingleSection } from '@/lib/api/shopify';
+import { ProductSingleSection } from '@/features/products/components';
 
 interface Props {
   params: {

@@ -1,7 +1,7 @@
 'use client';
 
 import { ShopifyProvider, CartProvider } from '@shopify/hydrogen-react';
-import { storeDomain, publicStorefrontToken, storefrontApiVersion } from '@site/lib/storefront';
+import { storeDomain, publicStorefrontToken, storefrontApiVersion } from '@/lib/storefront';
 
 export function RootProvider({ children }: { children: React.ReactNode }) {
   return (

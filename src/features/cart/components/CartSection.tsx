@@ -1,6 +1,6 @@
 'use client';
 
-import { NextImage, NextLink } from '@site/lib/deps';
+import { NextImage, NextLink } from '@/lib/deps';
 import {
   CartCost,
   useCart,

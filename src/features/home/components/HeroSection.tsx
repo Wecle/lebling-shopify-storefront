@@ -1,7 +1,7 @@
 'use client';
 
-import { NextLink } from '@site/lib/deps';
-import { Button } from '@site/components/ui/button';
+import { NextLink } from '@/lib/deps';
+import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
   return (

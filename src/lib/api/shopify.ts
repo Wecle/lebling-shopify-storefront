@@ -1,5 +1,5 @@
-import { formatTitle, invariant } from '@site/lib/deps';
-import { storefront } from '@site/lib/storefront';
+import { formatTitle, invariant } from '@/lib/deps';
+import { storefront } from '@/lib/storefront';
 import { truncate } from 'lodash';
 
 export async function fetchProductListSection(cursor?: string) {

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import { ProductListSection } from '@site/features/products/components';
-import { fetchProductListSection } from '@site/lib/api/shopify';
+import { ProductListSection } from '@/features/products/components';
+import { fetchProductListSection } from '@/lib/api/shopify';
 
 export const metadata: Metadata = {
   title: 'Products',

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, NextLink, usePathname, clsx } from '@site/lib/deps';
+import { useState, NextLink, usePathname, clsx } from '@/lib/deps';
 import { Dialog, Popover } from '@headlessui/react';
 import { useCart } from '@shopify/hydrogen-react';
 import { Bars3Icon, XMarkIcon, ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';

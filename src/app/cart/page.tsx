@@ -1,4 +1,4 @@
-import { CartSection } from '@site/features/cart/components';
+import { CartSection } from '@/features/cart/components';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
