@@ -1,7 +1,6 @@
 'use client';
 
 import { NextLink } from '@/lib/deps';
-import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
   return (
@@ -15,7 +14,6 @@ export function HeroSection() {
           >
             Browse Products
           </NextLink>
-          <Button>Drawer</Button>
         </div>
       </div>
     </section>
