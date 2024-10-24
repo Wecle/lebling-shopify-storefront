@@ -1,4 +1,6 @@
-import { useState, NextLink, useRouter, clsx } from '@site/utilities/deps';
+'use client';
+
+import { useState, NextLink, usePathname, clsx } from '@site/lib/deps';
 import { Dialog, Popover } from '@headlessui/react';
 import { useCart } from '@shopify/hydrogen-react';
 import { Bars3Icon, XMarkIcon, ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
@@ -12,13 +14,12 @@ const mainMenuItems: { text: string; href: string }[] = [
 
 export function HeaderSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const router = useRouter();
   const { totalQuantity } = useCart();
+  const pathname = usePathname();
 
   function isMenuItemActive(href: string) {
-    const { pathname } = new URL('https://x' + href);
-
-    return router.pathname.startsWith(pathname);
+    const { pathname: itemPath } = new URL('https://x' + href);
+    return pathname?.startsWith(itemPath);
   }
 
   return (
@@ -27,7 +28,7 @@ export function HeaderSection() {
         <div className="flex lg:flex-1">
           <NextLink href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Next Shopify Storefront</span>
-            <ShoppingBagIcon className="h-6 w-6"></ShoppingBagIcon>
+            <ShoppingBagIcon className="size-6"></ShoppingBagIcon>
           </NextLink>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -49,7 +50,7 @@ export function HeaderSection() {
           <NextLink href="/cart">
             <span className="sr-only">Cart</span>
             <span className="relative inline-block">
-              <ShoppingCartIcon className="h-6 w-6"></ShoppingCartIcon>
+              <ShoppingCartIcon className="size-6"></ShoppingCartIcon>
               {!!totalQuantity && (
                 <span className="absolute right-0 top-0 inline-flex -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full bg-red-600 px-2 py-1 text-xs font-bold leading-none text-red-100">
                   {totalQuantity}
@@ -65,7 +66,7 @@ export function HeaderSection() {
           >
             <span className="sr-only">Open main menu</span>
             <span className="relative inline-block">
-              <Bars3Icon className="-mt-1 h-6  w-6" aria-hidden="true" />
+              <Bars3Icon className="-mt-1 size-6" aria-hidden="true" />
             </span>
           </button>
         </div>
@@ -80,7 +81,7 @@ export function HeaderSection() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="size-6" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">

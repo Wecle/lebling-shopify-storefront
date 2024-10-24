@@ -1,42 +1,11 @@
-import { storefront } from '@site/utilities/storefront';
-import { NextImage, NextLink, useState, useAsyncFn, DataProps } from '@site/utilities/deps';
-import { Button } from '@site/snippets';
+'use client';
+
+import { NextImage, NextLink, useState, useAsyncFn, DataProps } from '@site/lib/deps';
+import { Button } from '@site/components/ui';
 import { Money } from '@shopify/hydrogen-react';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-
-export async function fetchProductListSection(cursor?: string) {
-  const { products } = await storefront.query({
-    products: [
-      { first: 12, after: cursor || null },
-      {
-        pageInfo: {
-          hasNextPage: true,
-        },
-        edges: {
-          cursor: true,
-          node: {
-            handle: true,
-            title: true,
-            priceRange: {
-              minVariantPrice: {
-                amount: true,
-                currencyCode: true,
-              },
-            },
-            featuredImage: {
-              url: [{ transform: { maxWidth: 500 } }, true],
-              altText: true,
-              width: true,
-              height: true,
-            },
-          },
-        },
-      },
-    ],
-  });
-  return products;
-}
+import { fetchProductListSection } from '@site/lib/api/shopify';
 
 export function ProductListSection(props: DataProps<typeof fetchProductListSection>) {
   const [pages, setPages] = useState([props.data]);

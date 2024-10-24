@@ -11,7 +11,7 @@ const storefrontApiVersion = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERS
 const apiEndpoint = `${storeDomain}/api/${storefrontApiVersion}/graphql.json`;
 
 const zeusPath = path.resolve('node_modules', '.bin', 'zeus');
-const outputPath = path.resolve('src', 'utilities', 'storefront');
+const outputPath = path.resolve('src', 'lib', 'storefront');
 
 execSync(
   `"${zeusPath}" ${apiEndpoint} ${outputPath} --header=X-Shopify-Storefront-Access-Token:${publicStorefrontToken}`,

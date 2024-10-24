@@ -1,4 +1,6 @@
-import { NextImage, NextLink } from '@site/utilities/deps';
+'use client';
+
+import { NextImage, NextLink } from '@site/lib/deps';
 import {
   CartCost,
   useCart,
@@ -18,13 +20,13 @@ export function CartSection() {
         {cart.lines?.map((line) => (
           <li key={line?.id} className="flex py-6">
             <CartLineProvider line={line!}>
-              <div className="h-24 w-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
+              <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
                 <NextImage
                   src={line?.merchandise?.image?.url!}
                   alt={line?.merchandise?.image?.altText || ''}
                   width={line?.merchandise?.image?.width!}
                   height={line?.merchandise?.image?.height!}
-                  className="h-full w-full object-cover object-center"
+                  className="size-full object-cover object-center"
                 />
               </div>
 

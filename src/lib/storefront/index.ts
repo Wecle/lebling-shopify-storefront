@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { ZeusScalars, Chain } from './zeus';
 import { createStorefrontClient } from '@shopify/hydrogen-react';
 
@@ -27,9 +28,11 @@ const scalars = ZeusScalars({
 });
 
 export const storefront = {
-  query: chain('query', {
-    scalars,
-  }),
+  query: cache(
+    chain('query', {
+      scalars,
+    })
+  ),
   mutation: chain('mutation', {
     scalars,
   }),

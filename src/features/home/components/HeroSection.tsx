@@ -1,4 +1,6 @@
-import { NextLink } from '@site/utilities/deps';
+'use client';
+
+import { NextLink } from '@site/lib/deps';
 import { Button } from '@/components/ui/button';
 
 export function HeroSection() {

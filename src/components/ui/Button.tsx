@@ -1,4 +1,4 @@
-import { ReactNode, clsx, NextLink } from '@site/utilities/deps';
+import { ReactNode, clsx, NextLink } from '@site/lib/deps';
 
 interface Props {
   onClick?: () => void;
@@ -11,8 +11,8 @@ interface Props {
 }
 
 const colors = {
-  primary: clsx('bg-primary-600 text-white hover:bg-primary-500 disabled:bg-primary-400'),
-  danger: clsx('bg-danger-600 text-white hover:bg-danger-500 disabled:bg-danger-400'),
+  primary: clsx('bg-primary-600 hover:bg-primary-500 disabled:bg-primary-400 text-white'),
+  danger: clsx('bg-danger-600 hover:bg-danger-500 disabled:bg-danger-400 text-white'),
   dark: clsx('bg-gray-900 text-white hover:bg-gray-800 disabled:bg-gray-700'),
   light: clsx('bg-gray-100 text-white hover:bg-gray-200 disabled:bg-gray-300'),
 };

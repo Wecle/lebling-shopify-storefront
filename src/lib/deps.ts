@@ -3,7 +3,6 @@
 export { Fragment } from 'react';
 export { default as NextLink } from 'next/link';
 export { default as NextImage } from 'next/image';
-export { DefaultSeo, NextSeo } from 'next-seo';
 
 /* Functions
  ********************************************************************************/
@@ -14,7 +13,7 @@ export { fetchStaticProps, fetchStaticPaths, fetchServerSideProps } from '@maxvi
 
 /* Hooks
  ********************************************************************************/
-export { useRouter } from 'next/router';
+export { useRouter, usePathname, useSearchParams } from 'next/navigation';
 export { useEffect, useState } from 'react';
 export { useAsyncFn } from 'react-use';
 export { useVariantSelector } from '@maxvien/shopify';
