@@ -1,11 +1,11 @@
 'use client';
 
 import { NextImage, NextLink, useState, useAsyncFn, DataProps } from '@site/lib/deps';
-import { Button } from '@site/components/ui';
 import { Money } from '@shopify/hydrogen-react';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { fetchProductListSection } from '@site/lib/api/shopify';
+import { Button } from '@site/components/shared';
 
 export function ProductListSection(props: DataProps<typeof fetchProductListSection>) {
   const [pages, setPages] = useState([props.data]);

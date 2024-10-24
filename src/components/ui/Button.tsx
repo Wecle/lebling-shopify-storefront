@@ -1,57 +1,57 @@
-import { ReactNode, clsx, NextLink } from '@site/lib/deps';
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-interface Props {
-  onClick?: () => void;
-  children: ReactNode;
-  className?: string;
-  color: 'primary' | 'danger' | 'light' | 'dark';
-  size: 'xs' | 'sm' | 'md';
-  href?: string;
-  disabled?: boolean;
-}
+import { cn } from "@site/lib/utils"
 
-const colors = {
-  primary: clsx('bg-primary-600 hover:bg-primary-500 disabled:bg-primary-400 text-white'),
-  danger: clsx('bg-danger-600 hover:bg-danger-500 disabled:bg-danger-400 text-white'),
-  dark: clsx('bg-gray-900 text-white hover:bg-gray-800 disabled:bg-gray-700'),
-  light: clsx('bg-gray-100 text-white hover:bg-gray-200 disabled:bg-gray-300'),
-};
-
-const sizes = {
-  xs: clsx('px-2 py-1 text-xs'),
-  sm: clsx('px-3 py-2 text-sm'),
-  md: clsx('px-4 py-3 text-base'),
-};
-
-export function Button(props: Props) {
-  if (props.href) {
-    return (
-      <NextLink
-        href={props.href}
-        className={clsx(
-          'pointer-events-auto rounded-md font-semibold leading-5',
-          colors[props.color],
-          sizes[props.size],
-          props.className
-        )}
-      >
-        {props.children}
-      </NextLink>
-    );
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
   }
+)
 
-  return (
-    <button
-      onClick={props.onClick}
-      className={clsx(
-        'pointer-events-auto rounded-md font-semibold leading-5 ',
-        colors[props.color],
-        sizes[props.size],
-        props.className
-      )}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </button>
-  );
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
 }
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
+
+export { Button, buttonVariants }
