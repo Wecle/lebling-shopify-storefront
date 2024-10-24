@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { AllTypesProps, ReturnTypes, Ops } from './const';
-export const HOST = "https://le-blingbling.myshopify.com/api/2024-10/graphql.json"
+export const HOST = "https://le-blingbling.myshopify.com/api/2024-07/graphql.json"
 
 
 export const HEADERS = {}
@@ -857,7 +857,7 @@ export const GRAPHQL_TYPE_SEPARATOR = `__$GRAPHQL__`;
 export const $ = <Type extends GraphQLVariableType, Name extends string>(name: Name, graphqlType: Type) => {
   return (START_VAR_NAME + name + GRAPHQL_TYPE_SEPARATOR + graphqlType) as unknown as Variable<Type, Name>;
 };
-type ZEUS_INTERFACES = GraphQLTypes["BaseCartLine"] | GraphQLTypes["CartDiscountAllocation"] | GraphQLTypes["DiscountApplication"] | GraphQLTypes["DisplayableError"] | GraphQLTypes["HasMetafields"] | GraphQLTypes["Media"] | GraphQLTypes["Node"] | GraphQLTypes["OnlineStorePublishable"] | GraphQLTypes["SitemapResourceInterface"] | GraphQLTypes["Trackable"]
+type ZEUS_INTERFACES = GraphQLTypes["BaseCartLine"] | GraphQLTypes["CartDiscountAllocation"] | GraphQLTypes["DiscountApplication"] | GraphQLTypes["DisplayableError"] | GraphQLTypes["HasMetafields"] | GraphQLTypes["Media"] | GraphQLTypes["Node"] | GraphQLTypes["OnlineStorePublishable"] | GraphQLTypes["Trackable"]
 export type ScalarCoders = {
 	Color?: ScalarResolver;
 	DateTime?: ScalarResolver;
@@ -1269,8 +1269,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
@@ -1289,8 +1287,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents information about the buyer that is interacting with the cart. */
@@ -1349,8 +1345,6 @@ Preferences are not synced back to the cart if they are overwritten.
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents how credit card details are provided for a direct payment.
@@ -1444,8 +1438,6 @@ The cart cost uses [`CartBuyerIdentity`](https://shopify.dev/api/storefront/refe
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
@@ -1605,8 +1597,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Possible error codes that can be returned by `CartUserError`. */
@@ -1637,8 +1627,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields to create a cart. */
@@ -1765,8 +1753,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartLinesRemove` mutation. */
@@ -1775,8 +1761,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartLinesUpdate` mutation. */
@@ -1785,8 +1769,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields to delete a cart metafield. */
@@ -1834,8 +1816,6 @@ The type of data must be a [supported type](https://shopify.dev/apps/metafields/
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields for updating the payment method that will be used to checkout.
@@ -1864,8 +1844,6 @@ Use this payment method input if the total cost of the cart is 0.
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** A set of preferences tied to the buyer interacting with the cart. Preferences are used to prefill fields in at checkout to streamline information collection. 
@@ -1904,8 +1882,6 @@ The input must not contain more than `250` values. */
 	cart?:ValueTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ValueTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ValueTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartSubmitForCompletion` mutation. */
@@ -1941,18 +1917,6 @@ The input must not contain more than `250` values. */
 	/** The payment method information for the Shop Pay wallet. */
 	shopPayWalletContent?: ValueTypes["ShopPayWalletContentInput"] | undefined | null | Variable<any, string>
 };
-	/** A warning that occurred during a cart mutation. */
-["CartWarning"]: AliasType<{
-	/** The code of the warning. */
-	code?:boolean | `@${string}`,
-	/** The message text of the warning. */
-	message?:boolean | `@${string}`,
-	/** The target of the warning. */
-	target?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The code for the cart warning. */
-["CartWarningCode"]:CartWarningCode;
 	/** A collection represents a grouping of products that a shop owner can create to
 organize them or make their shops easier to browse.
  */
@@ -2165,16 +2129,6 @@ attribute?: [{	/** The key of the attribute. */
 	sellingPlanAllocation?:ValueTypes["SellingPlanAllocation"],
 		__typename?: boolean | `@${string}`
 }>;
-	/** Details for count of elements. */
-["Count"]: AliasType<{
-	/** Count of elements. */
-	count?:boolean | `@${string}`,
-	/** Precision of count, how exact is the value. */
-	precision?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The precision of the value returned by a count field. */
-["CountPrecision"]:CountPrecision;
 	/** A country. */
 ["Country"]: AliasType<{
 	/** The languages available for the country. */
@@ -3681,11 +3635,7 @@ and [nodes](https://shopify.dev/api/admin-graphql/unstable/queries/nodes) querie
 		['...on ProductOptionValue']?: Omit<ValueTypes["ProductOptionValue"],keyof ValueTypes["Node"]>;
 		['...on ProductVariant']?: Omit<ValueTypes["ProductVariant"],keyof ValueTypes["Node"]>;
 		['...on Shop']?: Omit<ValueTypes["Shop"],keyof ValueTypes["Node"]>;
-		['...on ShopPayInstallmentsFinancingPlan']?: Omit<ValueTypes["ShopPayInstallmentsFinancingPlan"],keyof ValueTypes["Node"]>;
-		['...on ShopPayInstallmentsFinancingPlanTerm']?: Omit<ValueTypes["ShopPayInstallmentsFinancingPlanTerm"],keyof ValueTypes["Node"]>;
-		['...on ShopPayInstallmentsProductVariantPricing']?: Omit<ValueTypes["ShopPayInstallmentsProductVariantPricing"],keyof ValueTypes["Node"]>;
 		['...on ShopPolicy']?: Omit<ValueTypes["ShopPolicy"],keyof ValueTypes["Node"]>;
-		['...on TaxonomyCategory']?: Omit<ValueTypes["TaxonomyCategory"],keyof ValueTypes["Node"]>;
 		['...on UrlRedirect']?: Omit<ValueTypes["UrlRedirect"],keyof ValueTypes["Node"]>;
 		['...on Video']?: Omit<ValueTypes["Video"],keyof ValueTypes["Node"]>;
 		__typename?: boolean | `@${string}`
@@ -3943,23 +3893,13 @@ For more information, please read our [GraphQL Pagination Usage Guide](https://s
 }>;
 	/** The set of valid sort keys for the Page query. */
 ["PageSortKeys"]:PageSortKeys;
-	/** Type for paginating through multiple sitemap's resources. */
-["PaginatedSitemapResources"]: AliasType<{
-	/** Whether there are more pages to fetch following the current page. */
-	hasNextPage?:boolean | `@${string}`,
-	/** List of sitemap resources for the current page.
-Note: The number of items varies between 0 and 250 per page.
- */
-	items?:ValueTypes["SitemapResourceInterface"],
-		__typename?: boolean | `@${string}`
-}>;
 	/** Settings related to payments. */
 ["PaymentSettings"]: AliasType<{
-	/** List of the card brands which the business entity accepts. */
+	/** List of the card brands which the shop accepts. */
 	acceptedCardBrands?:boolean | `@${string}`,
 	/** The url pointing to the endpoint to vault credit cards. */
 	cardVaultUrl?:boolean | `@${string}`,
-	/** The country where the shop is located. When multiple business entities operate within the shop, then this will represent the country of the business entity that's serving the specified buyer context. */
+	/** The country where the shop is located. */
 	countryCode?:boolean | `@${string}`,
 	/** The three-letter code for the shop's primary currency. */
 	currencyCode?:boolean | `@${string}`,
@@ -3969,7 +3909,7 @@ Merchants can enable currencies from their Shopify Payments settings in the Shop
 	enabledPresentmentCurrencies?:boolean | `@${string}`,
 	/** The shop’s Shopify Payments account ID. */
 	shopifyPaymentsAccountId?:boolean | `@${string}`,
-	/** List of the digital wallets which the business entity supports. */
+	/** List of the digital wallets which the shop supports. */
 	supportedDigitalWallets?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
@@ -4020,16 +3960,8 @@ qualifies as a product, as do services (such as equipment rental, work for hire,
 customization of another product or an extended warranty).
  */
 ["Product"]: AliasType<{
-adjacentVariants?: [{	/** The input fields used for a selected option.
-
-The input must not contain more than `250` values. */
-	selectedOptions?: Array<ValueTypes["SelectedOptionInput"]> | undefined | null | Variable<any, string>,	/** Whether to ignore product options that are not present on the requested product. */
-	ignoreUnknownOptions?: boolean | undefined | null | Variable<any, string>,	/** Whether to perform case insensitive match on option names and values. */
-	caseInsensitiveMatch?: boolean | undefined | null | Variable<any, string>},ValueTypes["ProductVariant"]],
 	/** Indicates if at least one product variant is available for sale. */
 	availableForSale?:boolean | `@${string}`,
-	/** The taxonomy category for the product. */
-	category?:ValueTypes["TaxonomyCategory"],
 collections?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null | Variable<any, string>,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null | Variable<any, string>,	/** Returns up to the last `n` elements from the list. */
@@ -4044,63 +3976,6 @@ description?: [{	/** Truncates string after the given length. */
 	truncateAt?: number | undefined | null | Variable<any, string>},boolean | `@${string}`],
 	/** The description of the product, complete with HTML formatting. */
 	descriptionHtml?:boolean | `@${string}`,
-	/** An encoded string containing all option value combinations
-with a corresponding variant that is currently available for sale.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantAvailability?:boolean | `@${string}`,
-	/** An encoded string containing all option value combinations with a corresponding variant.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantExistence?:boolean | `@${string}`,
 	/** The featured image for the product.
 
 This field is functionally equivalent to `images(first: 1)`.
@@ -4149,12 +4024,6 @@ options?: [{	/** Truncate the array result to this size. */
 	publishedAt?:boolean | `@${string}`,
 	/** Whether the product can only be purchased with a selling plan. */
 	requiresSellingPlan?:boolean | `@${string}`,
-selectedOrFirstAvailableVariant?: [{	/** The input fields used for a selected option.
-
-The input must not contain more than `250` values. */
-	selectedOptions?: Array<ValueTypes["SelectedOptionInput"]> | undefined | null | Variable<any, string>,	/** Whether to ignore unknown product options. */
-	ignoreUnknownOptions?: boolean | undefined | null | Variable<any, string>,	/** Whether to perform case insensitive match on option names and values. */
-	caseInsensitiveMatch?: boolean | undefined | null | Variable<any, string>},ValueTypes["ProductVariant"]],
 sellingPlanGroups?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null | Variable<any, string>,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null | Variable<any, string>,	/** Returns up to the last `n` elements from the list. */
@@ -4192,8 +4061,6 @@ variants?: [{	/** Returns up to the first `n` elements from the list. */
 	before?: string | undefined | null | Variable<any, string>,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null | Variable<any, string>,	/** Sort the underlying list by the given key. */
 	sortKey?: ValueTypes["ProductVariantSortKeys"] | undefined | null | Variable<any, string>},ValueTypes["ProductVariantConnection"]],
-	/** The total count of variants for this product. */
-	variantsCount?:ValueTypes["Count"],
 	/** The product’s vendor name. */
 	vendor?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
@@ -4266,12 +4133,6 @@ Variants are selected based on permutations of these options.
 	/** The product option value names. For example, "Red", "Blue", and "Green" for a "Color" option.
  */
 ["ProductOptionValue"]: AliasType<{
-	/** The product variant that combines this option value with the
-lowest-position option values for all other options.
-
-This field will always return a variant, provided a variant including this option value exists.
- */
-	firstSelectableVariant?:ValueTypes["ProductVariant"],
 	/** A globally-unique ID. */
 	id?:boolean | `@${string}`,
 	/** The name of the product option value. */
@@ -4366,8 +4227,6 @@ sellingPlanAllocations?: [{	/** Returns up to the first `n` elements from the li
 	last?: number | undefined | null | Variable<any, string>,	/** Returns the elements that come before the specified cursor. */
 	before?: string | undefined | null | Variable<any, string>,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null | Variable<any, string>},ValueTypes["SellingPlanAllocationConnection"]],
-	/** The Shop Pay Installments pricing information for the product variant. */
-	shopPayInstallmentsPricing?:ValueTypes["ShopPayInstallmentsProductVariantPricing"],
 	/** The SKU (stock keeping unit) associated with the variant. */
 	sku?:boolean | `@${string}`,
 storeAvailability?: [{	/** Used to sort results based on proximity to the provided location. */
@@ -4623,8 +4482,6 @@ pages?: [{	/** Returns up to the first `n` elements from the list. */
 Refer to the detailed [search syntax](https://shopify.dev/api/usage/search-syntax) for more information about using filters.
  */
 	query?: string | undefined | null | Variable<any, string>},ValueTypes["PageConnection"]],
-	/** Settings related to payments. */
-	paymentSettings?:ValueTypes["PaymentSettings"],
 predictiveSearch?: [{	/** Limits the number of results based on `limit_scope`. The value can range from 1 to 10, and the default is 10. */
 	limit?: number | undefined | null | Variable<any, string>,	/** Decides the distribution of results. */
 	limitScope?: ValueTypes["PredictiveSearchLimitScope"] | undefined | null | Variable<any, string>,	/** The search query. */
@@ -4664,19 +4521,19 @@ products?: [{	/** Returns up to the first `n` elements from the list. */
 	last?: number | undefined | null | Variable<any, string>,	/** Returns the elements that come before the specified cursor. */
 	before?: string | undefined | null | Variable<any, string>,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null | Variable<any, string>,	/** Sort the underlying list by the given key. */
-	sortKey?: ValueTypes["ProductSortKeys"] | undefined | null | Variable<any, string>,	/** Apply one or multiple filters to the query.
+	sortKey?: ValueTypes["ProductSortKeys"] | undefined | null | Variable<any, string>,	/** You can apply one or multiple filters to a query.
 | name | description | acceptable_values | default_value | example_use |
 | ---- | ---- | ---- | ---- | ---- |
-| available_for_sale |
-| created_at |
-| product_type |
-| tag |
-| tag_not |
-| title |
-| updated_at |
-| variants.price |
-| vendor |
-Refer to the detailed [search syntax](https://shopify.dev/api/usage/search-syntax) for more information about using filters.
+| available_for_sale | Filter by products that have at least one product variant available for sale. |
+| created_at | Filter by the date and time when the product was created. | | | - `created_at:>'2020-10-21T23:39:20Z'`<br/> - `created_at:<now`<br/> - `created_at:<=2024` |
+| product_type | Filter by a comma-separated list of [product types](https://help.shopify.com/en/manual/products/details/product-type). | | | `product_type:snowboard` |
+| tag | Filter products by the product [`tags`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-tags) field. | | | `tag:my_tag` |
+| tag_not | Filter by products that don't have the specified product [tags](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-tags). | | | `tag_not:my_tag` |
+| title | Filter by the product [`title`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-title) field. | | | `title:The Minimal Snowboard` |
+| updated_at | Filter by the date and time when the product was last updated. | | | - `updated_at:>'2020-10-21T23:39:20Z'`<br/> - `updated_at:<now`<br/> - `updated_at:<=2024` |
+| variants.price | Filter by the price of the product's variants. |
+| vendor | Filter by the product [`vendor`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-vendor) field. | | | - `vendor:Snowdevil`<br/> - `vendor:Snowdevil OR vendor:Icedevil` |
+Learn more about [Shopify API search syntax](https://shopify.dev/api/usage/search-syntax).
  */
 	query?: string | undefined | null | Variable<any, string>},ValueTypes["ProductConnection"]],
 	/** The list of public Storefront API versions, including supported, release candidate and unstable versions. */
@@ -4699,8 +4556,6 @@ The input must not contain more than `250` values. */
 	unavailableProducts?: ValueTypes["SearchUnavailableProductsType"] | undefined | null | Variable<any, string>},ValueTypes["SearchResultItemConnection"]],
 	/** The shop associated with the storefront access token. */
 	shop?:ValueTypes["Shop"],
-sitemap?: [{	/** The type of the resource for the sitemap. */
-	type: ValueTypes["SitemapType"] | Variable<any, string>},ValueTypes["Sitemap"]],
 urlRedirects?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null | Variable<any, string>,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null | Variable<any, string>,	/** Returns up to the last `n` elements from the list. */
@@ -5066,68 +4921,10 @@ The input must not contain more than `250` values. */
 	shippingPolicy?:ValueTypes["ShopPolicy"],
 	/** Countries that the shop ships to. */
 	shipsToCountries?:boolean | `@${string}`,
-	/** The Shop Pay Installments pricing information for the shop. */
-	shopPayInstallmentsPricing?:ValueTypes["ShopPayInstallmentsPricing"],
 	/** The shop’s subscription policy. */
 	subscriptionPolicy?:ValueTypes["ShopPolicyWithDefault"],
 	/** The shop’s terms of service. */
 	termsOfService?:ValueTypes["ShopPolicy"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlan"]: AliasType<{
-	/** A globally-unique ID. */
-	id?:boolean | `@${string}`,
-	/** The maximum price to qualify for the financing plan. */
-	maxPrice?:ValueTypes["MoneyV2"],
-	/** The minimum price to qualify for the financing plan. */
-	minPrice?:ValueTypes["MoneyV2"],
-	/** The terms of the financing plan. */
-	terms?:ValueTypes["ShopPayInstallmentsFinancingPlanTerm"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The payment frequency for a Shop Pay Installments Financing Plan. */
-["ShopPayInstallmentsFinancingPlanFrequency"]:ShopPayInstallmentsFinancingPlanFrequency;
-	/** The terms of the financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlanTerm"]: AliasType<{
-	/** The annual percentage rate (APR) of the financing plan. */
-	apr?:boolean | `@${string}`,
-	/** The payment frequency for the financing plan. */
-	frequency?:boolean | `@${string}`,
-	/** A globally-unique ID. */
-	id?:boolean | `@${string}`,
-	/** The number of installments for the financing plan. */
-	installmentsCount?:ValueTypes["Count"],
-	/** The type of loan for the financing plan. */
-	loanType?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The loan type for a Shop Pay Installments Financing Plan Term. */
-["ShopPayInstallmentsLoan"]:ShopPayInstallmentsLoan;
-	/** The result for a Shop Pay Installments pricing request. */
-["ShopPayInstallmentsPricing"]: AliasType<{
-	/** The financing plans available for the given price range. */
-	financingPlans?:ValueTypes["ShopPayInstallmentsFinancingPlan"],
-	/** The maximum price to qualify for financing. */
-	maxPrice?:ValueTypes["MoneyV2"],
-	/** The minimum price to qualify for financing. */
-	minPrice?:ValueTypes["MoneyV2"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The shop pay installments pricing information for a product variant. */
-["ShopPayInstallmentsProductVariantPricing"]: AliasType<{
-	/** Whether the product variant is available. */
-	available?:boolean | `@${string}`,
-	/** Whether the product variant is eligible for Shop Pay Installments. */
-	eligible?:boolean | `@${string}`,
-	/** The full price of the product variant. */
-	fullPrice?:ValueTypes["MoneyV2"],
-	/** The ID of the product variant. */
-	id?:boolean | `@${string}`,
-	/** The number of payment terms available for the product variant. */
-	installmentsCount?:ValueTypes["Count"],
-	/** The price per term for the product variant. */
-	pricePerTerm?:ValueTypes["MoneyV2"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents a Shop Pay payment request. */
@@ -5464,62 +5261,6 @@ Otherwise, the policy will return the merchant-configured value.
 	url?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
-	/** Contains all fields required to generate sitemaps. */
-["Sitemap"]: AliasType<{
-	/** The number of sitemap's pages for a given type. */
-	pagesCount?:ValueTypes["Count"],
-resources?: [{	/** The page number to fetch. */
-	page: number | Variable<any, string>},ValueTypes["PaginatedSitemapResources"]],
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents a sitemap's image. */
-["SitemapImage"]: AliasType<{
-	/** Image's alt text. */
-	alt?:boolean | `@${string}`,
-	/** Path to the image. */
-	filepath?:boolean | `@${string}`,
-	/** The date and time when the image was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents a sitemap resource that is not a metaobject. */
-["SitemapResource"]: AliasType<{
-	/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** Resource's image. */
-	image?:ValueTypes["SitemapImage"],
-	/** Resource's title. */
-	title?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents the common fields for all sitemap resource types. */
-["SitemapResourceInterface"]:AliasType<{
-		/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`;
-		['...on SitemapResource']?: Omit<ValueTypes["SitemapResource"],keyof ValueTypes["SitemapResourceInterface"]>;
-		['...on SitemapResourceMetaobject']?: Omit<ValueTypes["SitemapResourceMetaobject"],keyof ValueTypes["SitemapResourceInterface"]>;
-		__typename?: boolean | `@${string}`
-}>;
-	/** A SitemapResourceMetaobject represents a metaobject with
-[the `renderable` capability](https://shopify.dev/docs/apps/build/custom-data/metaobjects/use-metaobject-capabilities#render-metaobjects-as-web-pages).
- */
-["SitemapResourceMetaobject"]: AliasType<{
-	/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** The URL handle for accessing pages of this metaobject type in the Online Store. */
-	onlineStoreUrlHandle?:boolean | `@${string}`,
-	/** The type of the metaobject. Defines the namespace of its associated metafields. */
-	type?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The types of resources potentially present in a sitemap. */
-["SitemapType"]:SitemapType;
 	/** The availability of a product variant at a particular location.
 Local pick-up must be enabled in the  store's shipping settings, otherwise this will return an empty result.
  */
@@ -5617,17 +5358,6 @@ next poll request.
 	color?:boolean | `@${string}`,
 	/** The swatch image. */
 	image?:ValueTypes["MediaImage"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The taxonomy category for the product.
- */
-["TaxonomyCategory"]: AliasType<{
-	/** All parent nodes of the current taxonomy category. */
-	ancestors?:ValueTypes["TaxonomyCategory"],
-	/** A static identifier for the taxonomy category. */
-	id?:boolean | `@${string}`,
-	/** The localized name of the taxonomy category. */
-	name?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents a resource that you can track the origin of the search traffic. */
@@ -6169,8 +5899,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
@@ -6189,8 +5917,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents information about the buyer that is interacting with the cart. */
@@ -6249,8 +5975,6 @@ Preferences are not synced back to the cart if they are overwritten.
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents how credit card details are provided for a direct payment.
@@ -6346,8 +6070,6 @@ The cart cost uses [`CartBuyerIdentity`](https://shopify.dev/api/storefront/refe
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
@@ -6507,8 +6229,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Possible error codes that can be returned by `CartUserError`. */
@@ -6539,8 +6259,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields to create a cart. */
@@ -6667,8 +6385,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartLinesRemove` mutation. */
@@ -6677,8 +6393,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartLinesUpdate` mutation. */
@@ -6687,8 +6401,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields to delete a cart metafield. */
@@ -6736,8 +6448,6 @@ The type of data must be a [supported type](https://shopify.dev/apps/metafields/
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** The input fields for updating the payment method that will be used to checkout.
@@ -6766,8 +6476,6 @@ Use this payment method input if the total cost of the cart is 0.
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** A set of preferences tied to the buyer interacting with the cart. Preferences are used to prefill fields in at checkout to streamline information collection. 
@@ -6806,8 +6514,6 @@ The input must not contain more than `250` values. */
 	cart?:ResolverInputTypes["Cart"],
 	/** The list of errors that occurred from executing the mutation. */
 	userErrors?:ResolverInputTypes["CartUserError"],
-	/** A list of warnings that occurred during the mutation. */
-	warnings?:ResolverInputTypes["CartWarning"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Return type for `cartSubmitForCompletion` mutation. */
@@ -6844,18 +6550,6 @@ The input must not contain more than `250` values. */
 	/** The payment method information for the Shop Pay wallet. */
 	shopPayWalletContent?: ResolverInputTypes["ShopPayWalletContentInput"] | undefined | null
 };
-	/** A warning that occurred during a cart mutation. */
-["CartWarning"]: AliasType<{
-	/** The code of the warning. */
-	code?:boolean | `@${string}`,
-	/** The message text of the warning. */
-	message?:boolean | `@${string}`,
-	/** The target of the warning. */
-	target?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The code for the cart warning. */
-["CartWarningCode"]:CartWarningCode;
 	/** A collection represents a grouping of products that a shop owner can create to
 organize them or make their shops easier to browse.
  */
@@ -7068,16 +6762,6 @@ attribute?: [{	/** The key of the attribute. */
 	sellingPlanAllocation?:ResolverInputTypes["SellingPlanAllocation"],
 		__typename?: boolean | `@${string}`
 }>;
-	/** Details for count of elements. */
-["Count"]: AliasType<{
-	/** Count of elements. */
-	count?:boolean | `@${string}`,
-	/** Precision of count, how exact is the value. */
-	precision?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The precision of the value returned by a count field. */
-["CountPrecision"]:CountPrecision;
 	/** A country. */
 ["Country"]: AliasType<{
 	/** The languages available for the country. */
@@ -8589,11 +8273,7 @@ and [nodes](https://shopify.dev/api/admin-graphql/unstable/queries/nodes) querie
 		['...on ProductOptionValue']?: Omit<ResolverInputTypes["ProductOptionValue"],keyof ResolverInputTypes["Node"]>;
 		['...on ProductVariant']?: Omit<ResolverInputTypes["ProductVariant"],keyof ResolverInputTypes["Node"]>;
 		['...on Shop']?: Omit<ResolverInputTypes["Shop"],keyof ResolverInputTypes["Node"]>;
-		['...on ShopPayInstallmentsFinancingPlan']?: Omit<ResolverInputTypes["ShopPayInstallmentsFinancingPlan"],keyof ResolverInputTypes["Node"]>;
-		['...on ShopPayInstallmentsFinancingPlanTerm']?: Omit<ResolverInputTypes["ShopPayInstallmentsFinancingPlanTerm"],keyof ResolverInputTypes["Node"]>;
-		['...on ShopPayInstallmentsProductVariantPricing']?: Omit<ResolverInputTypes["ShopPayInstallmentsProductVariantPricing"],keyof ResolverInputTypes["Node"]>;
 		['...on ShopPolicy']?: Omit<ResolverInputTypes["ShopPolicy"],keyof ResolverInputTypes["Node"]>;
-		['...on TaxonomyCategory']?: Omit<ResolverInputTypes["TaxonomyCategory"],keyof ResolverInputTypes["Node"]>;
 		['...on UrlRedirect']?: Omit<ResolverInputTypes["UrlRedirect"],keyof ResolverInputTypes["Node"]>;
 		['...on Video']?: Omit<ResolverInputTypes["Video"],keyof ResolverInputTypes["Node"]>;
 		__typename?: boolean | `@${string}`
@@ -8851,23 +8531,13 @@ For more information, please read our [GraphQL Pagination Usage Guide](https://s
 }>;
 	/** The set of valid sort keys for the Page query. */
 ["PageSortKeys"]:PageSortKeys;
-	/** Type for paginating through multiple sitemap's resources. */
-["PaginatedSitemapResources"]: AliasType<{
-	/** Whether there are more pages to fetch following the current page. */
-	hasNextPage?:boolean | `@${string}`,
-	/** List of sitemap resources for the current page.
-Note: The number of items varies between 0 and 250 per page.
- */
-	items?:ResolverInputTypes["SitemapResourceInterface"],
-		__typename?: boolean | `@${string}`
-}>;
 	/** Settings related to payments. */
 ["PaymentSettings"]: AliasType<{
-	/** List of the card brands which the business entity accepts. */
+	/** List of the card brands which the shop accepts. */
 	acceptedCardBrands?:boolean | `@${string}`,
 	/** The url pointing to the endpoint to vault credit cards. */
 	cardVaultUrl?:boolean | `@${string}`,
-	/** The country where the shop is located. When multiple business entities operate within the shop, then this will represent the country of the business entity that's serving the specified buyer context. */
+	/** The country where the shop is located. */
 	countryCode?:boolean | `@${string}`,
 	/** The three-letter code for the shop's primary currency. */
 	currencyCode?:boolean | `@${string}`,
@@ -8877,7 +8547,7 @@ Merchants can enable currencies from their Shopify Payments settings in the Shop
 	enabledPresentmentCurrencies?:boolean | `@${string}`,
 	/** The shop’s Shopify Payments account ID. */
 	shopifyPaymentsAccountId?:boolean | `@${string}`,
-	/** List of the digital wallets which the business entity supports. */
+	/** List of the digital wallets which the shop supports. */
 	supportedDigitalWallets?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
@@ -8929,16 +8599,8 @@ qualifies as a product, as do services (such as equipment rental, work for hire,
 customization of another product or an extended warranty).
  */
 ["Product"]: AliasType<{
-adjacentVariants?: [{	/** The input fields used for a selected option.
-
-The input must not contain more than `250` values. */
-	selectedOptions?: Array<ResolverInputTypes["SelectedOptionInput"]> | undefined | null,	/** Whether to ignore product options that are not present on the requested product. */
-	ignoreUnknownOptions?: boolean | undefined | null,	/** Whether to perform case insensitive match on option names and values. */
-	caseInsensitiveMatch?: boolean | undefined | null},ResolverInputTypes["ProductVariant"]],
 	/** Indicates if at least one product variant is available for sale. */
 	availableForSale?:boolean | `@${string}`,
-	/** The taxonomy category for the product. */
-	category?:ResolverInputTypes["TaxonomyCategory"],
 collections?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null,	/** Returns up to the last `n` elements from the list. */
@@ -8953,63 +8615,6 @@ description?: [{	/** Truncates string after the given length. */
 	truncateAt?: number | undefined | null},boolean | `@${string}`],
 	/** The description of the product, complete with HTML formatting. */
 	descriptionHtml?:boolean | `@${string}`,
-	/** An encoded string containing all option value combinations
-with a corresponding variant that is currently available for sale.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantAvailability?:boolean | `@${string}`,
-	/** An encoded string containing all option value combinations with a corresponding variant.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantExistence?:boolean | `@${string}`,
 	/** The featured image for the product.
 
 This field is functionally equivalent to `images(first: 1)`.
@@ -9058,12 +8663,6 @@ options?: [{	/** Truncate the array result to this size. */
 	publishedAt?:boolean | `@${string}`,
 	/** Whether the product can only be purchased with a selling plan. */
 	requiresSellingPlan?:boolean | `@${string}`,
-selectedOrFirstAvailableVariant?: [{	/** The input fields used for a selected option.
-
-The input must not contain more than `250` values. */
-	selectedOptions?: Array<ResolverInputTypes["SelectedOptionInput"]> | undefined | null,	/** Whether to ignore unknown product options. */
-	ignoreUnknownOptions?: boolean | undefined | null,	/** Whether to perform case insensitive match on option names and values. */
-	caseInsensitiveMatch?: boolean | undefined | null},ResolverInputTypes["ProductVariant"]],
 sellingPlanGroups?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null,	/** Returns up to the last `n` elements from the list. */
@@ -9101,8 +8700,6 @@ variants?: [{	/** Returns up to the first `n` elements from the list. */
 	before?: string | undefined | null,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null,	/** Sort the underlying list by the given key. */
 	sortKey?: ResolverInputTypes["ProductVariantSortKeys"] | undefined | null},ResolverInputTypes["ProductVariantConnection"]],
-	/** The total count of variants for this product. */
-	variantsCount?:ResolverInputTypes["Count"],
 	/** The product’s vendor name. */
 	vendor?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
@@ -9175,12 +8772,6 @@ Variants are selected based on permutations of these options.
 	/** The product option value names. For example, "Red", "Blue", and "Green" for a "Color" option.
  */
 ["ProductOptionValue"]: AliasType<{
-	/** The product variant that combines this option value with the
-lowest-position option values for all other options.
-
-This field will always return a variant, provided a variant including this option value exists.
- */
-	firstSelectableVariant?:ResolverInputTypes["ProductVariant"],
 	/** A globally-unique ID. */
 	id?:boolean | `@${string}`,
 	/** The name of the product option value. */
@@ -9275,8 +8866,6 @@ sellingPlanAllocations?: [{	/** Returns up to the first `n` elements from the li
 	last?: number | undefined | null,	/** Returns the elements that come before the specified cursor. */
 	before?: string | undefined | null,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null},ResolverInputTypes["SellingPlanAllocationConnection"]],
-	/** The Shop Pay Installments pricing information for the product variant. */
-	shopPayInstallmentsPricing?:ResolverInputTypes["ShopPayInstallmentsProductVariantPricing"],
 	/** The SKU (stock keeping unit) associated with the variant. */
 	sku?:boolean | `@${string}`,
 storeAvailability?: [{	/** Used to sort results based on proximity to the provided location. */
@@ -9532,8 +9121,6 @@ pages?: [{	/** Returns up to the first `n` elements from the list. */
 Refer to the detailed [search syntax](https://shopify.dev/api/usage/search-syntax) for more information about using filters.
  */
 	query?: string | undefined | null},ResolverInputTypes["PageConnection"]],
-	/** Settings related to payments. */
-	paymentSettings?:ResolverInputTypes["PaymentSettings"],
 predictiveSearch?: [{	/** Limits the number of results based on `limit_scope`. The value can range from 1 to 10, and the default is 10. */
 	limit?: number | undefined | null,	/** Decides the distribution of results. */
 	limitScope?: ResolverInputTypes["PredictiveSearchLimitScope"] | undefined | null,	/** The search query. */
@@ -9573,19 +9160,19 @@ products?: [{	/** Returns up to the first `n` elements from the list. */
 	last?: number | undefined | null,	/** Returns the elements that come before the specified cursor. */
 	before?: string | undefined | null,	/** Reverse the order of the underlying list. */
 	reverse?: boolean | undefined | null,	/** Sort the underlying list by the given key. */
-	sortKey?: ResolverInputTypes["ProductSortKeys"] | undefined | null,	/** Apply one or multiple filters to the query.
+	sortKey?: ResolverInputTypes["ProductSortKeys"] | undefined | null,	/** You can apply one or multiple filters to a query.
 | name | description | acceptable_values | default_value | example_use |
 | ---- | ---- | ---- | ---- | ---- |
-| available_for_sale |
-| created_at |
-| product_type |
-| tag |
-| tag_not |
-| title |
-| updated_at |
-| variants.price |
-| vendor |
-Refer to the detailed [search syntax](https://shopify.dev/api/usage/search-syntax) for more information about using filters.
+| available_for_sale | Filter by products that have at least one product variant available for sale. |
+| created_at | Filter by the date and time when the product was created. | | | - `created_at:>'2020-10-21T23:39:20Z'`<br/> - `created_at:<now`<br/> - `created_at:<=2024` |
+| product_type | Filter by a comma-separated list of [product types](https://help.shopify.com/en/manual/products/details/product-type). | | | `product_type:snowboard` |
+| tag | Filter products by the product [`tags`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-tags) field. | | | `tag:my_tag` |
+| tag_not | Filter by products that don't have the specified product [tags](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-tags). | | | `tag_not:my_tag` |
+| title | Filter by the product [`title`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-title) field. | | | `title:The Minimal Snowboard` |
+| updated_at | Filter by the date and time when the product was last updated. | | | - `updated_at:>'2020-10-21T23:39:20Z'`<br/> - `updated_at:<now`<br/> - `updated_at:<=2024` |
+| variants.price | Filter by the price of the product's variants. |
+| vendor | Filter by the product [`vendor`](https://shopify.dev/docs/api/storefront/latest/objects/Product#field-vendor) field. | | | - `vendor:Snowdevil`<br/> - `vendor:Snowdevil OR vendor:Icedevil` |
+Learn more about [Shopify API search syntax](https://shopify.dev/api/usage/search-syntax).
  */
 	query?: string | undefined | null},ResolverInputTypes["ProductConnection"]],
 	/** The list of public Storefront API versions, including supported, release candidate and unstable versions. */
@@ -9608,8 +9195,6 @@ The input must not contain more than `250` values. */
 	unavailableProducts?: ResolverInputTypes["SearchUnavailableProductsType"] | undefined | null},ResolverInputTypes["SearchResultItemConnection"]],
 	/** The shop associated with the storefront access token. */
 	shop?:ResolverInputTypes["Shop"],
-sitemap?: [{	/** The type of the resource for the sitemap. */
-	type: ResolverInputTypes["SitemapType"]},ResolverInputTypes["Sitemap"]],
 urlRedirects?: [{	/** Returns up to the first `n` elements from the list. */
 	first?: number | undefined | null,	/** Returns the elements that come after the specified cursor. */
 	after?: string | undefined | null,	/** Returns up to the last `n` elements from the list. */
@@ -9980,68 +9565,10 @@ The input must not contain more than `250` values. */
 	shippingPolicy?:ResolverInputTypes["ShopPolicy"],
 	/** Countries that the shop ships to. */
 	shipsToCountries?:boolean | `@${string}`,
-	/** The Shop Pay Installments pricing information for the shop. */
-	shopPayInstallmentsPricing?:ResolverInputTypes["ShopPayInstallmentsPricing"],
 	/** The shop’s subscription policy. */
 	subscriptionPolicy?:ResolverInputTypes["ShopPolicyWithDefault"],
 	/** The shop’s terms of service. */
 	termsOfService?:ResolverInputTypes["ShopPolicy"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlan"]: AliasType<{
-	/** A globally-unique ID. */
-	id?:boolean | `@${string}`,
-	/** The maximum price to qualify for the financing plan. */
-	maxPrice?:ResolverInputTypes["MoneyV2"],
-	/** The minimum price to qualify for the financing plan. */
-	minPrice?:ResolverInputTypes["MoneyV2"],
-	/** The terms of the financing plan. */
-	terms?:ResolverInputTypes["ShopPayInstallmentsFinancingPlanTerm"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The payment frequency for a Shop Pay Installments Financing Plan. */
-["ShopPayInstallmentsFinancingPlanFrequency"]:ShopPayInstallmentsFinancingPlanFrequency;
-	/** The terms of the financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlanTerm"]: AliasType<{
-	/** The annual percentage rate (APR) of the financing plan. */
-	apr?:boolean | `@${string}`,
-	/** The payment frequency for the financing plan. */
-	frequency?:boolean | `@${string}`,
-	/** A globally-unique ID. */
-	id?:boolean | `@${string}`,
-	/** The number of installments for the financing plan. */
-	installmentsCount?:ResolverInputTypes["Count"],
-	/** The type of loan for the financing plan. */
-	loanType?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The loan type for a Shop Pay Installments Financing Plan Term. */
-["ShopPayInstallmentsLoan"]:ShopPayInstallmentsLoan;
-	/** The result for a Shop Pay Installments pricing request. */
-["ShopPayInstallmentsPricing"]: AliasType<{
-	/** The financing plans available for the given price range. */
-	financingPlans?:ResolverInputTypes["ShopPayInstallmentsFinancingPlan"],
-	/** The maximum price to qualify for financing. */
-	maxPrice?:ResolverInputTypes["MoneyV2"],
-	/** The minimum price to qualify for financing. */
-	minPrice?:ResolverInputTypes["MoneyV2"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The shop pay installments pricing information for a product variant. */
-["ShopPayInstallmentsProductVariantPricing"]: AliasType<{
-	/** Whether the product variant is available. */
-	available?:boolean | `@${string}`,
-	/** Whether the product variant is eligible for Shop Pay Installments. */
-	eligible?:boolean | `@${string}`,
-	/** The full price of the product variant. */
-	fullPrice?:ResolverInputTypes["MoneyV2"],
-	/** The ID of the product variant. */
-	id?:boolean | `@${string}`,
-	/** The number of payment terms available for the product variant. */
-	installmentsCount?:ResolverInputTypes["Count"],
-	/** The price per term for the product variant. */
-	pricePerTerm?:ResolverInputTypes["MoneyV2"],
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents a Shop Pay payment request. */
@@ -10378,62 +9905,6 @@ Otherwise, the policy will return the merchant-configured value.
 	url?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
-	/** Contains all fields required to generate sitemaps. */
-["Sitemap"]: AliasType<{
-	/** The number of sitemap's pages for a given type. */
-	pagesCount?:ResolverInputTypes["Count"],
-resources?: [{	/** The page number to fetch. */
-	page: number},ResolverInputTypes["PaginatedSitemapResources"]],
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents a sitemap's image. */
-["SitemapImage"]: AliasType<{
-	/** Image's alt text. */
-	alt?:boolean | `@${string}`,
-	/** Path to the image. */
-	filepath?:boolean | `@${string}`,
-	/** The date and time when the image was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents a sitemap resource that is not a metaobject. */
-["SitemapResource"]: AliasType<{
-	/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** Resource's image. */
-	image?:ResolverInputTypes["SitemapImage"],
-	/** Resource's title. */
-	title?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** Represents the common fields for all sitemap resource types. */
-["SitemapResourceInterface"]:AliasType<{
-		/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`;
-		['...on SitemapResource']?: Omit<ResolverInputTypes["SitemapResource"],keyof ResolverInputTypes["SitemapResourceInterface"]>;
-		['...on SitemapResourceMetaobject']?: Omit<ResolverInputTypes["SitemapResourceMetaobject"],keyof ResolverInputTypes["SitemapResourceInterface"]>;
-		__typename?: boolean | `@${string}`
-}>;
-	/** A SitemapResourceMetaobject represents a metaobject with
-[the `renderable` capability](https://shopify.dev/docs/apps/build/custom-data/metaobjects/use-metaobject-capabilities#render-metaobjects-as-web-pages).
- */
-["SitemapResourceMetaobject"]: AliasType<{
-	/** Resource's handle. */
-	handle?:boolean | `@${string}`,
-	/** The URL handle for accessing pages of this metaobject type in the Online Store. */
-	onlineStoreUrlHandle?:boolean | `@${string}`,
-	/** The type of the metaobject. Defines the namespace of its associated metafields. */
-	type?:boolean | `@${string}`,
-	/** The date and time when the resource was updated. */
-	updatedAt?:boolean | `@${string}`,
-		__typename?: boolean | `@${string}`
-}>;
-	/** The types of resources potentially present in a sitemap. */
-["SitemapType"]:SitemapType;
 	/** The availability of a product variant at a particular location.
 Local pick-up must be enabled in the  store's shipping settings, otherwise this will return an empty result.
  */
@@ -10531,17 +10002,6 @@ next poll request.
 	color?:boolean | `@${string}`,
 	/** The swatch image. */
 	image?:ResolverInputTypes["MediaImage"],
-		__typename?: boolean | `@${string}`
-}>;
-	/** The taxonomy category for the product.
- */
-["TaxonomyCategory"]: AliasType<{
-	/** All parent nodes of the current taxonomy category. */
-	ancestors?:ResolverInputTypes["TaxonomyCategory"],
-	/** A static identifier for the taxonomy category. */
-	id?:boolean | `@${string}`,
-	/** The localized name of the taxonomy category. */
-	name?:boolean | `@${string}`,
 		__typename?: boolean | `@${string}`
 }>;
 	/** Represents a resource that you can track the origin of the search traffic. */
@@ -10998,9 +10458,7 @@ delivery address preference or the default address of the logged-in customer.
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
 ["CartAutomaticDiscountAllocation"]: {
@@ -11016,9 +10474,7 @@ delivery address preference or the default address of the logged-in customer.
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** Represents information about the buyer that is interacting with the cart. */
 ["CartBuyerIdentity"]: {
@@ -11074,9 +10530,7 @@ Preferences are not synced back to the cart if they are overwritten.
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	["CartCardSource"]:CartCardSource;
 	/** The discount that has been applied to the cart line using a discount code. */
@@ -11153,9 +10607,7 @@ The cart cost uses [`CartBuyerIdentity`](https://shopify.dev/api/storefront/refe
 		/** The new cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
 ["CartCustomDiscountAllocation"]: {
@@ -11290,9 +10742,7 @@ The input must not contain more than `250` values. */
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	["CartErrorCode"]:CartErrorCode;
 	/** The estimated costs that the buyer will pay at checkout. The estimated cost uses [`CartBuyerIdentity`](https://shopify.dev/api/storefront/reference/cart/cartbuyeridentity) to determine [international pricing](https://shopify.dev/custom-storefronts/internationalization/international-pricing). */
@@ -11319,9 +10769,7 @@ The input must not contain more than `250` values. */
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** The input fields to create a cart. */
 ["CartInput"]: {
@@ -11443,27 +10891,21 @@ The input must not contain more than `250` values. */
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** Return type for `cartLinesRemove` mutation. */
 ["CartLinesRemovePayload"]: {
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** Return type for `cartLinesUpdate` mutation. */
 ["CartLinesUpdatePayload"]: {
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** The input fields to delete a cart metafield. */
 ["CartMetafieldDeleteInput"]: {
@@ -11507,9 +10949,7 @@ The type of data must be a [supported type](https://shopify.dev/apps/metafields/
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** The input fields for updating the payment method that will be used to checkout.
  */
@@ -11536,9 +10976,7 @@ Use this payment method input if the total cost of the cart is 0.
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** A set of preferences tied to the buyer interacting with the cart. Preferences are used to prefill fields in at checkout to streamline information collection. 
 Preferences are not synced back to the cart if they are overwritten.
@@ -11574,9 +11012,7 @@ The input must not contain more than `250` values. */
 		/** The updated cart. */
 	cart?: ModelTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<ModelTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<ModelTypes["CartWarning"]>
+	userErrors: Array<ModelTypes["CartUserError"]>
 };
 	/** Return type for `cartSubmitForCompletion` mutation. */
 ["CartSubmitForCompletionPayload"]: {
@@ -11604,16 +11040,6 @@ The input must not contain more than `250` values. */
 	/** The payment method information for the Shop Pay wallet. */
 	shopPayWalletContent?: ModelTypes["ShopPayWalletContentInput"] | undefined
 };
-	/** A warning that occurred during a cart mutation. */
-["CartWarning"]: {
-		/** The code of the warning. */
-	code: ModelTypes["CartWarningCode"],
-	/** The message text of the warning. */
-	message: string,
-	/** The target of the warning. */
-	target: string
-};
-	["CartWarningCode"]:CartWarningCode;
 	/** A collection represents a grouping of products that a shop owner can create to
 organize them or make their shops easier to browse.
  */
@@ -11794,14 +11220,6 @@ For example, "#6A8D48".
 	/** The selling plan associated with the cart line and the effect that each selling plan has on variants when they're purchased. */
 	sellingPlanAllocation?: ModelTypes["SellingPlanAllocation"] | undefined
 };
-	/** Details for count of elements. */
-["Count"]: {
-		/** Count of elements. */
-	count: number,
-	/** Precision of count, how exact is the value. */
-	precision: ModelTypes["CountPrecision"]
-};
-	["CountPrecision"]:CountPrecision;
 	/** A country. */
 ["Country"]: {
 		/** The languages available for the country. */
@@ -13019,7 +12437,7 @@ mutation presents a security risk.
 This interface is used by the [node](https://shopify.dev/api/admin-graphql/unstable/queries/node)
 and [nodes](https://shopify.dev/api/admin-graphql/unstable/queries/nodes) queries.
  */
-["Node"]: ModelTypes["AppliedGiftCard"] | ModelTypes["Article"] | ModelTypes["BaseCartLine"] | ModelTypes["Blog"] | ModelTypes["Cart"] | ModelTypes["CartLine"] | ModelTypes["Collection"] | ModelTypes["Comment"] | ModelTypes["Company"] | ModelTypes["CompanyContact"] | ModelTypes["CompanyLocation"] | ModelTypes["ComponentizableCartLine"] | ModelTypes["ExternalVideo"] | ModelTypes["GenericFile"] | ModelTypes["Location"] | ModelTypes["MailingAddress"] | ModelTypes["Market"] | ModelTypes["MediaImage"] | ModelTypes["MediaPresentation"] | ModelTypes["Menu"] | ModelTypes["MenuItem"] | ModelTypes["Metafield"] | ModelTypes["Metaobject"] | ModelTypes["Model3d"] | ModelTypes["Order"] | ModelTypes["Page"] | ModelTypes["Product"] | ModelTypes["ProductOption"] | ModelTypes["ProductOptionValue"] | ModelTypes["ProductVariant"] | ModelTypes["Shop"] | ModelTypes["ShopPayInstallmentsFinancingPlan"] | ModelTypes["ShopPayInstallmentsFinancingPlanTerm"] | ModelTypes["ShopPayInstallmentsProductVariantPricing"] | ModelTypes["ShopPolicy"] | ModelTypes["TaxonomyCategory"] | ModelTypes["UrlRedirect"] | ModelTypes["Video"];
+["Node"]: ModelTypes["AppliedGiftCard"] | ModelTypes["Article"] | ModelTypes["BaseCartLine"] | ModelTypes["Blog"] | ModelTypes["Cart"] | ModelTypes["CartLine"] | ModelTypes["Collection"] | ModelTypes["Comment"] | ModelTypes["Company"] | ModelTypes["CompanyContact"] | ModelTypes["CompanyLocation"] | ModelTypes["ComponentizableCartLine"] | ModelTypes["ExternalVideo"] | ModelTypes["GenericFile"] | ModelTypes["Location"] | ModelTypes["MailingAddress"] | ModelTypes["Market"] | ModelTypes["MediaImage"] | ModelTypes["MediaPresentation"] | ModelTypes["Menu"] | ModelTypes["MenuItem"] | ModelTypes["Metafield"] | ModelTypes["Metaobject"] | ModelTypes["Model3d"] | ModelTypes["Order"] | ModelTypes["Page"] | ModelTypes["Product"] | ModelTypes["ProductOption"] | ModelTypes["ProductOptionValue"] | ModelTypes["ProductVariant"] | ModelTypes["Shop"] | ModelTypes["ShopPolicy"] | ModelTypes["UrlRedirect"] | ModelTypes["Video"];
 	/** Represents a resource that can be published to the Online Store sales channel. */
 ["OnlineStorePublishable"]: ModelTypes["Article"] | ModelTypes["Blog"] | ModelTypes["Collection"] | ModelTypes["Metaobject"] | ModelTypes["Page"] | ModelTypes["Product"];
 	/** An order is a customer’s completed request to purchase one or more products from a shop. An order is created when a customer completes the checkout process, during which time they provides an email address, billing address and payment information. */
@@ -13234,22 +12652,13 @@ For more information, please read our [GraphQL Pagination Usage Guide](https://s
 	startCursor?: string | undefined
 };
 	["PageSortKeys"]:PageSortKeys;
-	/** Type for paginating through multiple sitemap's resources. */
-["PaginatedSitemapResources"]: {
-		/** Whether there are more pages to fetch following the current page. */
-	hasNextPage: boolean,
-	/** List of sitemap resources for the current page.
-Note: The number of items varies between 0 and 250 per page.
- */
-	items: Array<ModelTypes["SitemapResourceInterface"]>
-};
 	/** Settings related to payments. */
 ["PaymentSettings"]: {
-		/** List of the card brands which the business entity accepts. */
+		/** List of the card brands which the shop accepts. */
 	acceptedCardBrands: Array<ModelTypes["CardBrand"]>,
 	/** The url pointing to the endpoint to vault credit cards. */
 	cardVaultUrl: ModelTypes["URL"],
-	/** The country where the shop is located. When multiple business entities operate within the shop, then this will represent the country of the business entity that's serving the specified buyer context. */
+	/** The country where the shop is located. */
 	countryCode: ModelTypes["CountryCode"],
 	/** The three-letter code for the shop's primary currency. */
 	currencyCode: ModelTypes["CurrencyCode"],
@@ -13259,7 +12668,7 @@ Merchants can enable currencies from their Shopify Payments settings in the Shop
 	enabledPresentmentCurrencies: Array<ModelTypes["CurrencyCode"]>,
 	/** The shop’s Shopify Payments account ID. */
 	shopifyPaymentsAccountId?: string | undefined,
-	/** List of the digital wallets which the business entity supports. */
+	/** List of the digital wallets which the shop supports. */
 	supportedDigitalWallets: Array<ModelTypes["DigitalWallet"]>
 };
 	["PredictiveSearchLimitScope"]:PredictiveSearchLimitScope;
@@ -13301,21 +12710,8 @@ qualifies as a product, as do services (such as equipment rental, work for hire,
 customization of another product or an extended warranty).
  */
 ["Product"]: {
-		/** A list of variants whose selected options differ with the provided selected options by one, ordered by variant id.
-If selected options are not provided, adjacent variants to the first available variant is returned.
-
-Note that this field returns an array of variants. In most cases, the number of variants in this array will be low.
-However, with a low number of options and a high number of values per option, the number of variants returned
-here can be high. In such cases, it recommended to avoid using this field.
-
-This list of variants can be used in combination with the `options` field to build a rich variant picker that
-includes variant availability or other variant information.
- */
-	adjacentVariants: Array<ModelTypes["ProductVariant"]>,
-	/** Indicates if at least one product variant is available for sale. */
+		/** Indicates if at least one product variant is available for sale. */
 	availableForSale: boolean,
-	/** The taxonomy category for the product. */
-	category?: ModelTypes["TaxonomyCategory"] | undefined,
 	/** List of collections a product belongs to. */
 	collections: ModelTypes["CollectionConnection"],
 	/** The compare at price of the product across all variants. */
@@ -13326,63 +12722,6 @@ includes variant availability or other variant information.
 	description: string,
 	/** The description of the product, complete with HTML formatting. */
 	descriptionHtml: ModelTypes["HTML"],
-	/** An encoded string containing all option value combinations
-with a corresponding variant that is currently available for sale.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantAvailability?: string | undefined,
-	/** An encoded string containing all option value combinations with a corresponding variant.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantExistence?: string | undefined,
 	/** The featured image for the product.
 
 This field is functionally equivalent to `images(first: 1)`.
@@ -13418,12 +12757,6 @@ They are used by the Liquid templating language to refer to objects.
 	publishedAt: ModelTypes["DateTime"],
 	/** Whether the product can only be purchased with a selling plan. */
 	requiresSellingPlan: boolean,
-	/** Find an active product variant based on selected options, availability or the first variant.
-
-All arguments are optional. If no selected options are provided, the first available variant is returned.
-If no variants are available, the first variant is returned.
- */
-	selectedOrFirstAvailableVariant?: ModelTypes["ProductVariant"] | undefined,
 	/** A list of a product's available selling plan groups. A selling plan group represents a selling method. For example, 'Subscribe and save' is a selling method where customers pay for goods or services per delivery. A selling plan group contains individual selling plans. */
 	sellingPlanGroups: ModelTypes["SellingPlanGroupConnection"],
 	/** The product's SEO information. */
@@ -13451,8 +12784,6 @@ If there is not a variant for the selected options, `null` will be returned.
 	variantBySelectedOptions?: ModelTypes["ProductVariant"] | undefined,
 	/** List of the product’s variants. */
 	variants: ModelTypes["ProductVariantConnection"],
-	/** The total count of variants for this product. */
-	variantsCount?: ModelTypes["Count"] | undefined,
 	/** The product’s vendor name. */
 	vendor: string
 };
@@ -13518,13 +12849,7 @@ Variants are selected based on permutations of these options.
 	/** The product option value names. For example, "Red", "Blue", and "Green" for a "Color" option.
  */
 ["ProductOptionValue"]: {
-		/** The product variant that combines this option value with the
-lowest-position option values for all other options.
-
-This field will always return a variant, provided a variant including this option value exists.
- */
-	firstSelectableVariant?: ModelTypes["ProductVariant"] | undefined,
-	/** A globally-unique ID. */
+		/** A globally-unique ID. */
 	id: string,
 	/** The name of the product option value. */
 	name: string,
@@ -13597,8 +12922,6 @@ If `true`, then the product variant can only be purchased as a parent bundle wit
 	selectedOptions: Array<ModelTypes["SelectedOption"]>,
 	/** Represents an association between a variant and a selling plan. Selling plan allocations describe which selling plans are available for each variant, and what their impact is on pricing. */
 	sellingPlanAllocations: ModelTypes["SellingPlanAllocationConnection"],
-	/** The Shop Pay Installments pricing information for the product variant. */
-	shopPayInstallmentsPricing?: ModelTypes["ShopPayInstallmentsProductVariantPricing"] | undefined,
 	/** The SKU (stock keeping unit) associated with the variant. */
 	sku?: string | undefined,
 	/** The in-store pickup availability of this variant by location. */
@@ -13771,8 +13094,6 @@ When sorting by distance, you must specify a location via the `near` argument.
 	pageByHandle?: ModelTypes["Page"] | undefined,
 	/** List of the shop's pages. */
 	pages: ModelTypes["PageConnection"],
-	/** Settings related to payments. */
-	paymentSettings: ModelTypes["PaymentSettings"],
 	/** List of the predictive search results. */
 	predictiveSearch?: ModelTypes["PredictiveSearchResult"] | undefined,
 	/** Fetch a specific `Product` by one of its unique attributes. */
@@ -13790,7 +13111,7 @@ Additional access scope required: unauthenticated_read_product_tags.
 	productTags: ModelTypes["StringConnection"],
 	/** List of product types for the shop's products that are published to your app. */
 	productTypes: ModelTypes["StringConnection"],
-	/** List of the shop’s products. For storefront search, use [`search` query](https://shopify.dev/docs/api/storefront/latest/queries/search). */
+	/** Returns a list of the shop's products. For storefront search, use the [`search`](https://shopify.dev/docs/api/storefront/latest/queries/search) query. */
 	products: ModelTypes["ProductConnection"],
 	/** The list of public Storefront API versions, including supported, release candidate and unstable versions. */
 	publicApiVersions: Array<ModelTypes["ApiVersion"]>,
@@ -13798,8 +13119,6 @@ Additional access scope required: unauthenticated_read_product_tags.
 	search: ModelTypes["SearchResultItemConnection"],
 	/** The shop associated with the storefront access token. */
 	shop: ModelTypes["Shop"],
-	/** Contains all fields required to generate sitemaps. */
-	sitemap: ModelTypes["Sitemap"],
 	/** A list of redirects for a shop. */
 	urlRedirects: ModelTypes["UrlRedirectConnection"]
 };
@@ -14094,62 +13413,10 @@ Individual selling plans contribute their options to the associated selling plan
 	shippingPolicy?: ModelTypes["ShopPolicy"] | undefined,
 	/** Countries that the shop ships to. */
 	shipsToCountries: Array<ModelTypes["CountryCode"]>,
-	/** The Shop Pay Installments pricing information for the shop. */
-	shopPayInstallmentsPricing?: ModelTypes["ShopPayInstallmentsPricing"] | undefined,
 	/** The shop’s subscription policy. */
 	subscriptionPolicy?: ModelTypes["ShopPolicyWithDefault"] | undefined,
 	/** The shop’s terms of service. */
 	termsOfService?: ModelTypes["ShopPolicy"] | undefined
-};
-	/** The financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlan"]: {
-		/** A globally-unique ID. */
-	id: string,
-	/** The maximum price to qualify for the financing plan. */
-	maxPrice: ModelTypes["MoneyV2"],
-	/** The minimum price to qualify for the financing plan. */
-	minPrice: ModelTypes["MoneyV2"],
-	/** The terms of the financing plan. */
-	terms: Array<ModelTypes["ShopPayInstallmentsFinancingPlanTerm"]>
-};
-	["ShopPayInstallmentsFinancingPlanFrequency"]:ShopPayInstallmentsFinancingPlanFrequency;
-	/** The terms of the financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlanTerm"]: {
-		/** The annual percentage rate (APR) of the financing plan. */
-	apr: number,
-	/** The payment frequency for the financing plan. */
-	frequency: ModelTypes["ShopPayInstallmentsFinancingPlanFrequency"],
-	/** A globally-unique ID. */
-	id: string,
-	/** The number of installments for the financing plan. */
-	installmentsCount?: ModelTypes["Count"] | undefined,
-	/** The type of loan for the financing plan. */
-	loanType: ModelTypes["ShopPayInstallmentsLoan"]
-};
-	["ShopPayInstallmentsLoan"]:ShopPayInstallmentsLoan;
-	/** The result for a Shop Pay Installments pricing request. */
-["ShopPayInstallmentsPricing"]: {
-		/** The financing plans available for the given price range. */
-	financingPlans: Array<ModelTypes["ShopPayInstallmentsFinancingPlan"]>,
-	/** The maximum price to qualify for financing. */
-	maxPrice: ModelTypes["MoneyV2"],
-	/** The minimum price to qualify for financing. */
-	minPrice: ModelTypes["MoneyV2"]
-};
-	/** The shop pay installments pricing information for a product variant. */
-["ShopPayInstallmentsProductVariantPricing"]: {
-		/** Whether the product variant is available. */
-	available: boolean,
-	/** Whether the product variant is eligible for Shop Pay Installments. */
-	eligible: boolean,
-	/** The full price of the product variant. */
-	fullPrice: ModelTypes["MoneyV2"],
-	/** The ID of the product variant. */
-	id: string,
-	/** The number of payment terms available for the product variant. */
-	installmentsCount?: ModelTypes["Count"] | undefined,
-	/** The price per term for the product variant. */
-	pricePerTerm: ModelTypes["MoneyV2"]
 };
 	/** Represents a Shop Pay payment request. */
 ["ShopPayPaymentRequest"]: {
@@ -14470,55 +13737,6 @@ Otherwise, the policy will return the merchant-configured value.
 	/** Public URL to the policy. */
 	url: ModelTypes["URL"]
 };
-	/** Contains all fields required to generate sitemaps. */
-["Sitemap"]: {
-		/** The number of sitemap's pages for a given type. */
-	pagesCount?: ModelTypes["Count"] | undefined,
-	/** A list of sitemap's resources for a given type.
-
-Important Notes:
-  - The number of items per page varies from 0 to 250.
-  - Empty pages (0 items) may occur and do not necessarily indicate the end of results.
-  - Always check `hasNextPage` to determine if more pages are available.
- */
-	resources?: ModelTypes["PaginatedSitemapResources"] | undefined
-};
-	/** Represents a sitemap's image. */
-["SitemapImage"]: {
-		/** Image's alt text. */
-	alt?: string | undefined,
-	/** Path to the image. */
-	filepath?: string | undefined,
-	/** The date and time when the image was updated. */
-	updatedAt: ModelTypes["DateTime"]
-};
-	/** Represents a sitemap resource that is not a metaobject. */
-["SitemapResource"]: {
-		/** Resource's handle. */
-	handle: string,
-	/** Resource's image. */
-	image?: ModelTypes["SitemapImage"] | undefined,
-	/** Resource's title. */
-	title?: string | undefined,
-	/** The date and time when the resource was updated. */
-	updatedAt: ModelTypes["DateTime"]
-};
-	/** Represents the common fields for all sitemap resource types. */
-["SitemapResourceInterface"]: ModelTypes["SitemapResource"] | ModelTypes["SitemapResourceMetaobject"];
-	/** A SitemapResourceMetaobject represents a metaobject with
-[the `renderable` capability](https://shopify.dev/docs/apps/build/custom-data/metaobjects/use-metaobject-capabilities#render-metaobjects-as-web-pages).
- */
-["SitemapResourceMetaobject"]: {
-		/** Resource's handle. */
-	handle: string,
-	/** The URL handle for accessing pages of this metaobject type in the Online Store. */
-	onlineStoreUrlHandle?: string | undefined,
-	/** The type of the metaobject. Defines the namespace of its associated metafields. */
-	type: string,
-	/** The date and time when the resource was updated. */
-	updatedAt: ModelTypes["DateTime"]
-};
-	["SitemapType"]:SitemapType;
 	/** The availability of a product variant at a particular location.
 Local pick-up must be enabled in the  store's shipping settings, otherwise this will return an empty result.
  */
@@ -14605,16 +13823,6 @@ next poll request.
 	color?: ModelTypes["Color"] | undefined,
 	/** The swatch image. */
 	image?: ModelTypes["MediaImage"] | undefined
-};
-	/** The taxonomy category for the product.
- */
-["TaxonomyCategory"]: {
-		/** All parent nodes of the current taxonomy category. */
-	ancestors: Array<ModelTypes["TaxonomyCategory"]>,
-	/** A static identifier for the taxonomy category. */
-	id: string,
-	/** The localized name of the taxonomy category. */
-	name: string
 };
 	/** Represents a resource that you can track the origin of the search traffic. */
 ["Trackable"]: ModelTypes["Article"] | ModelTypes["Collection"] | ModelTypes["Page"] | ModelTypes["Product"] | ModelTypes["SearchQuerySuggestion"];
@@ -15087,9 +14295,7 @@ delivery address preference or the default address of the logged-in customer.
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
 ["CartAutomaticDiscountAllocation"]: {
@@ -15107,9 +14313,7 @@ delivery address preference or the default address of the logged-in customer.
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Represents information about the buyer that is interacting with the cart. */
 ["CartBuyerIdentity"]: {
@@ -15167,9 +14371,7 @@ Preferences are not synced back to the cart if they are overwritten.
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Represents how credit card details are provided for a direct payment.
  */
@@ -15264,9 +14466,7 @@ The cart cost uses [`CartBuyerIdentity`](https://shopify.dev/api/storefront/refe
 	/** The new cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** The discounts automatically applied to the cart line based on prerequisites that have been met. */
 ["CartCustomDiscountAllocation"]: {
@@ -15421,9 +14621,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Possible error codes that can be returned by `CartUserError`. */
 ["CartErrorCode"]: CartErrorCode;
@@ -15453,9 +14651,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** The input fields to create a cart. */
 ["CartInput"]: {
@@ -15581,9 +14777,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Return type for `cartLinesRemove` mutation. */
 ["CartLinesRemovePayload"]: {
@@ -15591,9 +14785,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Return type for `cartLinesUpdate` mutation. */
 ["CartLinesUpdatePayload"]: {
@@ -15601,9 +14793,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** The input fields to delete a cart metafield. */
 ["CartMetafieldDeleteInput"]: {
@@ -15650,9 +14840,7 @@ The type of data must be a [supported type](https://shopify.dev/apps/metafields/
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** The input fields for updating the payment method that will be used to checkout.
  */
@@ -15680,9 +14868,7 @@ Use this payment method input if the total cost of the cart is 0.
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** A set of preferences tied to the buyer interacting with the cart. Preferences are used to prefill fields in at checkout to streamline information collection. 
 Preferences are not synced back to the cart if they are overwritten.
@@ -15720,9 +14906,7 @@ The input must not contain more than `250` values. */
 	/** The updated cart. */
 	cart?: GraphQLTypes["Cart"] | undefined,
 	/** The list of errors that occurred from executing the mutation. */
-	userErrors: Array<GraphQLTypes["CartUserError"]>,
-	/** A list of warnings that occurred during the mutation. */
-	warnings: Array<GraphQLTypes["CartWarning"]>
+	userErrors: Array<GraphQLTypes["CartUserError"]>
 };
 	/** Return type for `cartSubmitForCompletion` mutation. */
 ["CartSubmitForCompletionPayload"]: {
@@ -15758,18 +14942,6 @@ The input must not contain more than `250` values. */
 	/** The payment method information for the Shop Pay wallet. */
 	shopPayWalletContent?: GraphQLTypes["ShopPayWalletContentInput"] | undefined
 };
-	/** A warning that occurred during a cart mutation. */
-["CartWarning"]: {
-	__typename: "CartWarning",
-	/** The code of the warning. */
-	code: GraphQLTypes["CartWarningCode"],
-	/** The message text of the warning. */
-	message: string,
-	/** The target of the warning. */
-	target: string
-};
-	/** The code for the cart warning. */
-["CartWarningCode"]: CartWarningCode;
 	/** A collection represents a grouping of products that a shop owner can create to
 organize them or make their shops easier to browse.
  */
@@ -15965,16 +15137,6 @@ For example, "#6A8D48".
 	/** The selling plan associated with the cart line and the effect that each selling plan has on variants when they're purchased. */
 	sellingPlanAllocation?: GraphQLTypes["SellingPlanAllocation"] | undefined
 };
-	/** Details for count of elements. */
-["Count"]: {
-	__typename: "Count",
-	/** Count of elements. */
-	count: number,
-	/** Precision of count, how exact is the value. */
-	precision: GraphQLTypes["CountPrecision"]
-};
-	/** The precision of the value returned by a count field. */
-["CountPrecision"]: CountPrecision;
 	/** A country. */
 ["Country"]: {
 	__typename: "Country",
@@ -17408,7 +16570,7 @@ This interface is used by the [node](https://shopify.dev/api/admin-graphql/unsta
 and [nodes](https://shopify.dev/api/admin-graphql/unstable/queries/nodes) queries.
  */
 ["Node"]: {
-	__typename:"AppliedGiftCard" | "Article" | "BaseCartLine" | "Blog" | "Cart" | "CartLine" | "Collection" | "Comment" | "Company" | "CompanyContact" | "CompanyLocation" | "ComponentizableCartLine" | "ExternalVideo" | "GenericFile" | "Location" | "MailingAddress" | "Market" | "MediaImage" | "MediaPresentation" | "Menu" | "MenuItem" | "Metafield" | "Metaobject" | "Model3d" | "Order" | "Page" | "Product" | "ProductOption" | "ProductOptionValue" | "ProductVariant" | "Shop" | "ShopPayInstallmentsFinancingPlan" | "ShopPayInstallmentsFinancingPlanTerm" | "ShopPayInstallmentsProductVariantPricing" | "ShopPolicy" | "TaxonomyCategory" | "UrlRedirect" | "Video",
+	__typename:"AppliedGiftCard" | "Article" | "BaseCartLine" | "Blog" | "Cart" | "CartLine" | "Collection" | "Comment" | "Company" | "CompanyContact" | "CompanyLocation" | "ComponentizableCartLine" | "ExternalVideo" | "GenericFile" | "Location" | "MailingAddress" | "Market" | "MediaImage" | "MediaPresentation" | "Menu" | "MenuItem" | "Metafield" | "Metaobject" | "Model3d" | "Order" | "Page" | "Product" | "ProductOption" | "ProductOptionValue" | "ProductVariant" | "Shop" | "ShopPolicy" | "UrlRedirect" | "Video",
 	/** A globally-unique ID. */
 	id: string
 	['...on AppliedGiftCard']: '__union' & GraphQLTypes["AppliedGiftCard"];
@@ -17442,11 +16604,7 @@ and [nodes](https://shopify.dev/api/admin-graphql/unstable/queries/nodes) querie
 	['...on ProductOptionValue']: '__union' & GraphQLTypes["ProductOptionValue"];
 	['...on ProductVariant']: '__union' & GraphQLTypes["ProductVariant"];
 	['...on Shop']: '__union' & GraphQLTypes["Shop"];
-	['...on ShopPayInstallmentsFinancingPlan']: '__union' & GraphQLTypes["ShopPayInstallmentsFinancingPlan"];
-	['...on ShopPayInstallmentsFinancingPlanTerm']: '__union' & GraphQLTypes["ShopPayInstallmentsFinancingPlanTerm"];
-	['...on ShopPayInstallmentsProductVariantPricing']: '__union' & GraphQLTypes["ShopPayInstallmentsProductVariantPricing"];
 	['...on ShopPolicy']: '__union' & GraphQLTypes["ShopPolicy"];
-	['...on TaxonomyCategory']: '__union' & GraphQLTypes["TaxonomyCategory"];
 	['...on UrlRedirect']: '__union' & GraphQLTypes["UrlRedirect"];
 	['...on Video']: '__union' & GraphQLTypes["Video"];
 };
@@ -17689,24 +16847,14 @@ For more information, please read our [GraphQL Pagination Usage Guide](https://s
 };
 	/** The set of valid sort keys for the Page query. */
 ["PageSortKeys"]: PageSortKeys;
-	/** Type for paginating through multiple sitemap's resources. */
-["PaginatedSitemapResources"]: {
-	__typename: "PaginatedSitemapResources",
-	/** Whether there are more pages to fetch following the current page. */
-	hasNextPage: boolean,
-	/** List of sitemap resources for the current page.
-Note: The number of items varies between 0 and 250 per page.
- */
-	items: Array<GraphQLTypes["SitemapResourceInterface"]>
-};
 	/** Settings related to payments. */
 ["PaymentSettings"]: {
 	__typename: "PaymentSettings",
-	/** List of the card brands which the business entity accepts. */
+	/** List of the card brands which the shop accepts. */
 	acceptedCardBrands: Array<GraphQLTypes["CardBrand"]>,
 	/** The url pointing to the endpoint to vault credit cards. */
 	cardVaultUrl: GraphQLTypes["URL"],
-	/** The country where the shop is located. When multiple business entities operate within the shop, then this will represent the country of the business entity that's serving the specified buyer context. */
+	/** The country where the shop is located. */
 	countryCode: GraphQLTypes["CountryCode"],
 	/** The three-letter code for the shop's primary currency. */
 	currencyCode: GraphQLTypes["CurrencyCode"],
@@ -17716,7 +16864,7 @@ Merchants can enable currencies from their Shopify Payments settings in the Shop
 	enabledPresentmentCurrencies: Array<GraphQLTypes["CurrencyCode"]>,
 	/** The shop’s Shopify Payments account ID. */
 	shopifyPaymentsAccountId?: string | undefined,
-	/** List of the digital wallets which the business entity supports. */
+	/** List of the digital wallets which the shop supports. */
 	supportedDigitalWallets: Array<GraphQLTypes["DigitalWallet"]>
 };
 	/** Decides the distribution of results. */
@@ -17768,21 +16916,8 @@ customization of another product or an extended warranty).
  */
 ["Product"]: {
 	__typename: "Product",
-	/** A list of variants whose selected options differ with the provided selected options by one, ordered by variant id.
-If selected options are not provided, adjacent variants to the first available variant is returned.
-
-Note that this field returns an array of variants. In most cases, the number of variants in this array will be low.
-However, with a low number of options and a high number of values per option, the number of variants returned
-here can be high. In such cases, it recommended to avoid using this field.
-
-This list of variants can be used in combination with the `options` field to build a rich variant picker that
-includes variant availability or other variant information.
- */
-	adjacentVariants: Array<GraphQLTypes["ProductVariant"]>,
 	/** Indicates if at least one product variant is available for sale. */
 	availableForSale: boolean,
-	/** The taxonomy category for the product. */
-	category?: GraphQLTypes["TaxonomyCategory"] | undefined,
 	/** List of collections a product belongs to. */
 	collections: GraphQLTypes["CollectionConnection"],
 	/** The compare at price of the product across all variants. */
@@ -17793,63 +16928,6 @@ includes variant availability or other variant information.
 	description: string,
 	/** The description of the product, complete with HTML formatting. */
 	descriptionHtml: GraphQLTypes["HTML"],
-	/** An encoded string containing all option value combinations
-with a corresponding variant that is currently available for sale.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantAvailability?: string | undefined,
-	/** An encoded string containing all option value combinations with a corresponding variant.
-
-Integers represent option and values:
-[0,1] represents option_value at array index 0 for the option at array index 0
-
-`:`, `,`, ` ` and `-` are control characters.
-`:` indicates a new option. ex: 0:1 indicates value 0 for the option in position 1, value 1 for the option in position 2.
-`,` indicates the end of a repeated prefix, mulitple consecutive commas indicate the end of multiple repeated prefixes.
-` ` indicates a gap in the sequence of option values. ex: 0 4 indicates option values in position 0 and 4 are present.
-`-` indicates a continuous range of option values. ex: 0 1-3 4
-
-Decoding process:
-
-Example options: [Size, Color, Material]
-Example values: [[Small, Medium, Large], [Red, Blue], [Cotton, Wool]]
-Example encoded string: "0:0:0,1:0-1,,1:0:0-1,1:1,,2:0:1,1:0,,"
-
-Step 1: Expand ranges into the numbers they represent: "0:0:0,1:0 1,,1:0:0 1,1:1,,2:0:1,1:0,,"
-Step 2: Expand repeated prefixes: "0:0:0,0:1:0 1,1:0:0 1,1:1:1,2:0:1,2:1:0,"
-Step 3: Expand shared prefixes so data is encoded as a string: "0:0:0,0:1:0,0:1:1,1:0:0,1:0:1,1:1:1,2:0:1,2:1:0,"
-Step 4: Map to options + option values to determine existing variants:
-
-[Small, Red, Cotton] (0:0:0), [Small, Blue, Cotton] (0:1:0), [Small, Blue, Wool] (0:1:1),
-[Medium, Red, Cotton] (1:0:0), [Medium, Red, Wool] (1:0:1), [Medium, Blue, Wool] (1:1:1),
-[Large, Red, Wool] (2:0:1), [Large, Blue, Cotton] (2:1:0).
-
- */
-	encodedVariantExistence?: string | undefined,
 	/** The featured image for the product.
 
 This field is functionally equivalent to `images(first: 1)`.
@@ -17885,12 +16963,6 @@ They are used by the Liquid templating language to refer to objects.
 	publishedAt: GraphQLTypes["DateTime"],
 	/** Whether the product can only be purchased with a selling plan. */
 	requiresSellingPlan: boolean,
-	/** Find an active product variant based on selected options, availability or the first variant.
-
-All arguments are optional. If no selected options are provided, the first available variant is returned.
-If no variants are available, the first variant is returned.
- */
-	selectedOrFirstAvailableVariant?: GraphQLTypes["ProductVariant"] | undefined,
 	/** A list of a product's available selling plan groups. A selling plan group represents a selling method. For example, 'Subscribe and save' is a selling method where customers pay for goods or services per delivery. A selling plan group contains individual selling plans. */
 	sellingPlanGroups: GraphQLTypes["SellingPlanGroupConnection"],
 	/** The product's SEO information. */
@@ -17918,8 +16990,6 @@ If there is not a variant for the selected options, `null` will be returned.
 	variantBySelectedOptions?: GraphQLTypes["ProductVariant"] | undefined,
 	/** List of the product’s variants. */
 	variants: GraphQLTypes["ProductVariantConnection"],
-	/** The total count of variants for this product. */
-	variantsCount?: GraphQLTypes["Count"] | undefined,
 	/** The product’s vendor name. */
 	vendor: string
 };
@@ -17992,12 +17062,6 @@ Variants are selected based on permutations of these options.
  */
 ["ProductOptionValue"]: {
 	__typename: "ProductOptionValue",
-	/** The product variant that combines this option value with the
-lowest-position option values for all other options.
-
-This field will always return a variant, provided a variant including this option value exists.
- */
-	firstSelectableVariant?: GraphQLTypes["ProductVariant"] | undefined,
 	/** A globally-unique ID. */
 	id: string,
 	/** The name of the product option value. */
@@ -18078,8 +17142,6 @@ If `true`, then the product variant can only be purchased as a parent bundle wit
 	selectedOptions: Array<GraphQLTypes["SelectedOption"]>,
 	/** Represents an association between a variant and a selling plan. Selling plan allocations describe which selling plans are available for each variant, and what their impact is on pricing. */
 	sellingPlanAllocations: GraphQLTypes["SellingPlanAllocationConnection"],
-	/** The Shop Pay Installments pricing information for the product variant. */
-	shopPayInstallmentsPricing?: GraphQLTypes["ShopPayInstallmentsProductVariantPricing"] | undefined,
 	/** The SKU (stock keeping unit) associated with the variant. */
 	sku?: string | undefined,
 	/** The in-store pickup availability of this variant by location. */
@@ -18264,8 +17326,6 @@ When sorting by distance, you must specify a location via the `near` argument.
 	pageByHandle?: GraphQLTypes["Page"] | undefined,
 	/** List of the shop's pages. */
 	pages: GraphQLTypes["PageConnection"],
-	/** Settings related to payments. */
-	paymentSettings: GraphQLTypes["PaymentSettings"],
 	/** List of the predictive search results. */
 	predictiveSearch?: GraphQLTypes["PredictiveSearchResult"] | undefined,
 	/** Fetch a specific `Product` by one of its unique attributes. */
@@ -18283,7 +17343,7 @@ Additional access scope required: unauthenticated_read_product_tags.
 	productTags: GraphQLTypes["StringConnection"],
 	/** List of product types for the shop's products that are published to your app. */
 	productTypes: GraphQLTypes["StringConnection"],
-	/** List of the shop’s products. For storefront search, use [`search` query](https://shopify.dev/docs/api/storefront/latest/queries/search). */
+	/** Returns a list of the shop's products. For storefront search, use the [`search`](https://shopify.dev/docs/api/storefront/latest/queries/search) query. */
 	products: GraphQLTypes["ProductConnection"],
 	/** The list of public Storefront API versions, including supported, release candidate and unstable versions. */
 	publicApiVersions: Array<GraphQLTypes["ApiVersion"]>,
@@ -18291,8 +17351,6 @@ Additional access scope required: unauthenticated_read_product_tags.
 	search: GraphQLTypes["SearchResultItemConnection"],
 	/** The shop associated with the storefront access token. */
 	shop: GraphQLTypes["Shop"],
-	/** Contains all fields required to generate sitemaps. */
-	sitemap: GraphQLTypes["Sitemap"],
 	/** A list of redirects for a shop. */
 	urlRedirects: GraphQLTypes["UrlRedirectConnection"]
 };
@@ -18641,68 +17699,10 @@ Individual selling plans contribute their options to the associated selling plan
 	shippingPolicy?: GraphQLTypes["ShopPolicy"] | undefined,
 	/** Countries that the shop ships to. */
 	shipsToCountries: Array<GraphQLTypes["CountryCode"]>,
-	/** The Shop Pay Installments pricing information for the shop. */
-	shopPayInstallmentsPricing?: GraphQLTypes["ShopPayInstallmentsPricing"] | undefined,
 	/** The shop’s subscription policy. */
 	subscriptionPolicy?: GraphQLTypes["ShopPolicyWithDefault"] | undefined,
 	/** The shop’s terms of service. */
 	termsOfService?: GraphQLTypes["ShopPolicy"] | undefined
-};
-	/** The financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlan"]: {
-	__typename: "ShopPayInstallmentsFinancingPlan",
-	/** A globally-unique ID. */
-	id: string,
-	/** The maximum price to qualify for the financing plan. */
-	maxPrice: GraphQLTypes["MoneyV2"],
-	/** The minimum price to qualify for the financing plan. */
-	minPrice: GraphQLTypes["MoneyV2"],
-	/** The terms of the financing plan. */
-	terms: Array<GraphQLTypes["ShopPayInstallmentsFinancingPlanTerm"]>
-};
-	/** The payment frequency for a Shop Pay Installments Financing Plan. */
-["ShopPayInstallmentsFinancingPlanFrequency"]: ShopPayInstallmentsFinancingPlanFrequency;
-	/** The terms of the financing plan in Shop Pay Installments. */
-["ShopPayInstallmentsFinancingPlanTerm"]: {
-	__typename: "ShopPayInstallmentsFinancingPlanTerm",
-	/** The annual percentage rate (APR) of the financing plan. */
-	apr: number,
-	/** The payment frequency for the financing plan. */
-	frequency: GraphQLTypes["ShopPayInstallmentsFinancingPlanFrequency"],
-	/** A globally-unique ID. */
-	id: string,
-	/** The number of installments for the financing plan. */
-	installmentsCount?: GraphQLTypes["Count"] | undefined,
-	/** The type of loan for the financing plan. */
-	loanType: GraphQLTypes["ShopPayInstallmentsLoan"]
-};
-	/** The loan type for a Shop Pay Installments Financing Plan Term. */
-["ShopPayInstallmentsLoan"]: ShopPayInstallmentsLoan;
-	/** The result for a Shop Pay Installments pricing request. */
-["ShopPayInstallmentsPricing"]: {
-	__typename: "ShopPayInstallmentsPricing",
-	/** The financing plans available for the given price range. */
-	financingPlans: Array<GraphQLTypes["ShopPayInstallmentsFinancingPlan"]>,
-	/** The maximum price to qualify for financing. */
-	maxPrice: GraphQLTypes["MoneyV2"],
-	/** The minimum price to qualify for financing. */
-	minPrice: GraphQLTypes["MoneyV2"]
-};
-	/** The shop pay installments pricing information for a product variant. */
-["ShopPayInstallmentsProductVariantPricing"]: {
-	__typename: "ShopPayInstallmentsProductVariantPricing",
-	/** Whether the product variant is available. */
-	available: boolean,
-	/** Whether the product variant is eligible for Shop Pay Installments. */
-	eligible: boolean,
-	/** The full price of the product variant. */
-	fullPrice: GraphQLTypes["MoneyV2"],
-	/** The ID of the product variant. */
-	id: string,
-	/** The number of payment terms available for the product variant. */
-	installmentsCount?: GraphQLTypes["Count"] | undefined,
-	/** The price per term for the product variant. */
-	pricePerTerm: GraphQLTypes["MoneyV2"]
 };
 	/** Represents a Shop Pay payment request. */
 ["ShopPayPaymentRequest"]: {
@@ -19038,68 +18038,6 @@ Otherwise, the policy will return the merchant-configured value.
 	/** Public URL to the policy. */
 	url: GraphQLTypes["URL"]
 };
-	/** Contains all fields required to generate sitemaps. */
-["Sitemap"]: {
-	__typename: "Sitemap",
-	/** The number of sitemap's pages for a given type. */
-	pagesCount?: GraphQLTypes["Count"] | undefined,
-	/** A list of sitemap's resources for a given type.
-
-Important Notes:
-  - The number of items per page varies from 0 to 250.
-  - Empty pages (0 items) may occur and do not necessarily indicate the end of results.
-  - Always check `hasNextPage` to determine if more pages are available.
- */
-	resources?: GraphQLTypes["PaginatedSitemapResources"] | undefined
-};
-	/** Represents a sitemap's image. */
-["SitemapImage"]: {
-	__typename: "SitemapImage",
-	/** Image's alt text. */
-	alt?: string | undefined,
-	/** Path to the image. */
-	filepath?: string | undefined,
-	/** The date and time when the image was updated. */
-	updatedAt: GraphQLTypes["DateTime"]
-};
-	/** Represents a sitemap resource that is not a metaobject. */
-["SitemapResource"]: {
-	__typename: "SitemapResource",
-	/** Resource's handle. */
-	handle: string,
-	/** Resource's image. */
-	image?: GraphQLTypes["SitemapImage"] | undefined,
-	/** Resource's title. */
-	title?: string | undefined,
-	/** The date and time when the resource was updated. */
-	updatedAt: GraphQLTypes["DateTime"]
-};
-	/** Represents the common fields for all sitemap resource types. */
-["SitemapResourceInterface"]: {
-	__typename:"SitemapResource" | "SitemapResourceMetaobject",
-	/** Resource's handle. */
-	handle: string,
-	/** The date and time when the resource was updated. */
-	updatedAt: GraphQLTypes["DateTime"]
-	['...on SitemapResource']: '__union' & GraphQLTypes["SitemapResource"];
-	['...on SitemapResourceMetaobject']: '__union' & GraphQLTypes["SitemapResourceMetaobject"];
-};
-	/** A SitemapResourceMetaobject represents a metaobject with
-[the `renderable` capability](https://shopify.dev/docs/apps/build/custom-data/metaobjects/use-metaobject-capabilities#render-metaobjects-as-web-pages).
- */
-["SitemapResourceMetaobject"]: {
-	__typename: "SitemapResourceMetaobject",
-	/** Resource's handle. */
-	handle: string,
-	/** The URL handle for accessing pages of this metaobject type in the Online Store. */
-	onlineStoreUrlHandle?: string | undefined,
-	/** The type of the metaobject. Defines the namespace of its associated metafields. */
-	type: string,
-	/** The date and time when the resource was updated. */
-	updatedAt: GraphQLTypes["DateTime"]
-};
-	/** The types of resources potentially present in a sitemap. */
-["SitemapType"]: SitemapType;
 	/** The availability of a product variant at a particular location.
 Local pick-up must be enabled in the  store's shipping settings, otherwise this will return an empty result.
  */
@@ -19198,17 +18136,6 @@ next poll request.
 	color?: GraphQLTypes["Color"] | undefined,
 	/** The swatch image. */
 	image?: GraphQLTypes["MediaImage"] | undefined
-};
-	/** The taxonomy category for the product.
- */
-["TaxonomyCategory"]: {
-	__typename: "TaxonomyCategory",
-	/** All parent nodes of the current taxonomy category. */
-	ancestors: Array<GraphQLTypes["TaxonomyCategory"]>,
-	/** A static identifier for the taxonomy category. */
-	id: string,
-	/** The localized name of the taxonomy category. */
-	name: string
 };
 	/** Represents a resource that you can track the origin of the search traffic. */
 ["Trackable"]: {
@@ -19413,12 +18340,6 @@ export const enum CartErrorCode {
 	PROVINCE_NOT_FOUND = "PROVINCE_NOT_FOUND",
 	UNSPECIFIED_ADDRESS_ERROR = "UNSPECIFIED_ADDRESS_ERROR"
 }
-/** The code for the cart warning. */
-export const enum CartWarningCode {
-	MERCHANDISE_NOT_ENOUGH_STOCK = "MERCHANDISE_NOT_ENOUGH_STOCK",
-	MERCHANDISE_OUT_OF_STOCK = "MERCHANDISE_OUT_OF_STOCK",
-	PAYMENTS_GIFT_CARDS_UNAVAILABLE = "PAYMENTS_GIFT_CARDS_UNAVAILABLE"
-}
 /** The set of valid sort keys for the Collection query. */
 export const enum CollectionSortKeys {
 	TITLE = "TITLE",
@@ -19441,11 +18362,6 @@ export const enum CompletionErrorCode {
 	PAYMENT_INVALID_BILLING_ADDRESS = "PAYMENT_INVALID_BILLING_ADDRESS",
 	PAYMENT_CARD_DECLINED = "PAYMENT_CARD_DECLINED",
 	PAYMENT_CALL_ISSUER = "PAYMENT_CALL_ISSUER"
-}
-/** The precision of the value returned by a count field. */
-export const enum CountPrecision {
-	EXACT = "EXACT",
-	AT_LEAST = "AT_LEAST"
 }
 /** The code designating a country/region, which generally follows ISO 3166-1 alpha-2 guidelines.
 If a territory doesn't have a country code value in the `CountryCode` enum, then it might be considered a subdivision
@@ -20143,8 +19059,7 @@ export const enum MenuItemType {
 	SEARCH = "SEARCH",
 	SHOP_POLICY = "SHOP_POLICY",
 	HTTP = "HTTP",
-	METAOBJECT = "METAOBJECT",
-	CUSTOMER_ACCOUNT_PAGE = "CUSTOMER_ACCOUNT_PAGE"
+	METAOBJECT = "METAOBJECT"
 }
 /** Possible error codes that can be returned by `MetafieldDeleteUserError`. */
 export const enum MetafieldDeleteErrorCode {
@@ -20324,30 +19239,10 @@ export const enum SellingPlanInterval {
 	WEEK = "WEEK",
 	YEAR = "YEAR"
 }
-/** The payment frequency for a Shop Pay Installments Financing Plan. */
-export const enum ShopPayInstallmentsFinancingPlanFrequency {
-	WEEKLY = "WEEKLY",
-	MONTHLY = "MONTHLY"
-}
-/** The loan type for a Shop Pay Installments Financing Plan Term. */
-export const enum ShopPayInstallmentsLoan {
-	INTEREST = "INTEREST",
-	SPLIT_PAY = "SPLIT_PAY",
-	ZERO_PERCENT = "ZERO_PERCENT"
-}
 /** Represents the delivery method type for a Shop Pay payment request. */
 export const enum ShopPayPaymentRequestDeliveryMethodType {
 	SHIPPING = "SHIPPING",
 	PICKUP = "PICKUP"
-}
-/** The types of resources potentially present in a sitemap. */
-export const enum SitemapType {
-	PRODUCT = "PRODUCT",
-	COLLECTION = "COLLECTION",
-	PAGE = "PAGE",
-	METAOBJECT = "METAOBJECT",
-	BLOG = "BLOG",
-	ARTICLE = "ARTICLE"
 }
 /** The code of the error that occurred during cart submit for completion. */
 export const enum SubmissionErrorCode {
@@ -20511,11 +19406,9 @@ type ZEUS_VARIABLES = {
 	["CartPreferencesInput"]: ValueTypes["CartPreferencesInput"];
 	["CartSelectedDeliveryOptionInput"]: ValueTypes["CartSelectedDeliveryOptionInput"];
 	["CartWalletPaymentMethodInput"]: ValueTypes["CartWalletPaymentMethodInput"];
-	["CartWarningCode"]: ValueTypes["CartWarningCode"];
 	["CollectionSortKeys"]: ValueTypes["CollectionSortKeys"];
 	["Color"]: ValueTypes["Color"];
 	["CompletionErrorCode"]: ValueTypes["CompletionErrorCode"];
-	["CountPrecision"]: ValueTypes["CountPrecision"];
 	["CountryCode"]: ValueTypes["CountryCode"];
 	["CropRegion"]: ValueTypes["CropRegion"];
 	["CurrencyCode"]: ValueTypes["CurrencyCode"];
@@ -20579,8 +19472,6 @@ type ZEUS_VARIABLES = {
 	["SelectedOptionInput"]: ValueTypes["SelectedOptionInput"];
 	["SellingPlanCheckoutChargeType"]: ValueTypes["SellingPlanCheckoutChargeType"];
 	["SellingPlanInterval"]: ValueTypes["SellingPlanInterval"];
-	["ShopPayInstallmentsFinancingPlanFrequency"]: ValueTypes["ShopPayInstallmentsFinancingPlanFrequency"];
-	["ShopPayInstallmentsLoan"]: ValueTypes["ShopPayInstallmentsLoan"];
 	["ShopPayPaymentRequestDeliveryMethodInput"]: ValueTypes["ShopPayPaymentRequestDeliveryMethodInput"];
 	["ShopPayPaymentRequestDeliveryMethodType"]: ValueTypes["ShopPayPaymentRequestDeliveryMethodType"];
 	["ShopPayPaymentRequestDiscountInput"]: ValueTypes["ShopPayPaymentRequestDiscountInput"];
@@ -20590,7 +19481,6 @@ type ZEUS_VARIABLES = {
 	["ShopPayPaymentRequestShippingLineInput"]: ValueTypes["ShopPayPaymentRequestShippingLineInput"];
 	["ShopPayPaymentRequestTotalShippingPriceInput"]: ValueTypes["ShopPayPaymentRequestTotalShippingPriceInput"];
 	["ShopPayWalletContentInput"]: ValueTypes["ShopPayWalletContentInput"];
-	["SitemapType"]: ValueTypes["SitemapType"];
 	["SubmissionErrorCode"]: ValueTypes["SubmissionErrorCode"];
 	["URL"]: ValueTypes["URL"];
 	["UnitPriceMeasurementMeasuredType"]: ValueTypes["UnitPriceMeasurementMeasuredType"];

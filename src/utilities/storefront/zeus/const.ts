@@ -139,7 +139,6 @@ export const AllTypesProps: Record<string,any> = {
 		applePayWalletContent:"ApplePayWalletContentInput",
 		shopPayWalletContent:"ShopPayWalletContentInput"
 	},
-	CartWarningCode: "enum" as const,
 	Collection:{
 		description:{
 
@@ -184,7 +183,6 @@ export const AllTypesProps: Record<string,any> = {
 
 		}
 	},
-	CountPrecision: "enum" as const,
 	CountryCode: "enum" as const,
 	CropRegion: "enum" as const,
 	CurrencyCode: "enum" as const,
@@ -468,9 +466,6 @@ export const AllTypesProps: Record<string,any> = {
 
 	},
 	Product:{
-		adjacentVariants:{
-			selectedOptions:"SelectedOptionInput"
-		},
 		collections:{
 
 		},
@@ -491,9 +486,6 @@ export const AllTypesProps: Record<string,any> = {
 		},
 		options:{
 
-		},
-		selectedOrFirstAvailableVariant:{
-			selectedOptions:"SelectedOptionInput"
 		},
 		sellingPlanGroups:{
 
@@ -633,9 +625,6 @@ export const AllTypesProps: Record<string,any> = {
 			types:"SearchType",
 			unavailableProducts:"SearchUnavailableProductsType"
 		},
-		sitemap:{
-			type:"SitemapType"
-		},
 		urlRedirects:{
 
 		}
@@ -671,8 +660,6 @@ export const AllTypesProps: Record<string,any> = {
 			identifiers:"HasMetafieldsIdentifier"
 		}
 	},
-	ShopPayInstallmentsFinancingPlanFrequency: "enum" as const,
-	ShopPayInstallmentsLoan: "enum" as const,
 	ShopPayPaymentRequestDeliveryMethodInput:{
 		amount:"MoneyInput",
 		minDeliveryDate:"ISO8601DateTime",
@@ -717,12 +704,6 @@ export const AllTypesProps: Record<string,any> = {
 	ShopPayWalletContentInput:{
 		billingAddress:"MailingAddressInput"
 	},
-	Sitemap:{
-		resources:{
-
-		}
-	},
-	SitemapType: "enum" as const,
 	SubmissionErrorCode: "enum" as const,
 	URL: `scalar.URL` as const,
 	UnitPriceMeasurementMeasuredType: "enum" as const,
@@ -893,8 +874,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartAttributesUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartAutomaticDiscountAllocation:{
 		discountedAmount:"MoneyV2",
@@ -903,8 +883,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartBillingAddressUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartBuyerIdentity:{
 		countryCode:"CountryCode",
@@ -917,8 +896,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartBuyerIdentityUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartCodeDiscountAllocation:{
 		code:"String",
@@ -965,8 +943,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartCreatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartCustomDiscountAllocation:{
 		discountedAmount:"MoneyV2",
@@ -1021,8 +998,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartDiscountCodesUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartEstimatedCost:{
 		checkoutChargeAmount:"MoneyV2",
@@ -1033,8 +1009,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartGiftCardCodesUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartLine:{
 		attribute:"Attribute",
@@ -1061,18 +1036,15 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartLinesAddPayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartLinesRemovePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartLinesUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartMetafieldDeletePayload:{
 		deletedId:"ID",
@@ -1084,13 +1056,11 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartNoteUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartPaymentUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartPreferences:{
 		delivery:"CartDeliveryPreference",
@@ -1098,8 +1068,7 @@ export const ReturnTypes: Record<string,any> = {
 	},
 	CartSelectedDeliveryOptionsUpdatePayload:{
 		cart:"Cart",
-		userErrors:"CartUserError",
-		warnings:"CartWarning"
+		userErrors:"CartUserError"
 	},
 	CartSubmitForCompletionPayload:{
 		result:"CartSubmitForCompletionResult",
@@ -1115,11 +1084,6 @@ export const ReturnTypes: Record<string,any> = {
 		code:"CartErrorCode",
 		field:"String",
 		message:"String"
-	},
-	CartWarning:{
-		code:"CartWarningCode",
-		message:"String",
-		target:"ID"
 	},
 	Collection:{
 		description:"String",
@@ -1210,10 +1174,6 @@ export const ReturnTypes: Record<string,any> = {
 		merchandise:"Merchandise",
 		quantity:"Int",
 		sellingPlanAllocation:"SellingPlanAllocation"
-	},
-	Count:{
-		count:"Int",
-		precision:"CountPrecision"
 	},
 	Country:{
 		availableLanguages:"Language",
@@ -1809,11 +1769,7 @@ export const ReturnTypes: Record<string,any> = {
 		"...on ProductOptionValue": "ProductOptionValue",
 		"...on ProductVariant": "ProductVariant",
 		"...on Shop": "Shop",
-		"...on ShopPayInstallmentsFinancingPlan": "ShopPayInstallmentsFinancingPlan",
-		"...on ShopPayInstallmentsFinancingPlanTerm": "ShopPayInstallmentsFinancingPlanTerm",
-		"...on ShopPayInstallmentsProductVariantPricing": "ShopPayInstallmentsProductVariantPricing",
 		"...on ShopPolicy": "ShopPolicy",
-		"...on TaxonomyCategory": "TaxonomyCategory",
 		"...on UrlRedirect": "UrlRedirect",
 		"...on Video": "Video",
 		id:"ID"
@@ -1928,10 +1884,6 @@ export const ReturnTypes: Record<string,any> = {
 		hasPreviousPage:"Boolean",
 		startCursor:"String"
 	},
-	PaginatedSitemapResources:{
-		hasNextPage:"Boolean",
-		items:"SitemapResourceInterface"
-	},
 	PaymentSettings:{
 		acceptedCardBrands:"CardBrand",
 		cardVaultUrl:"URL",
@@ -1956,16 +1908,12 @@ export const ReturnTypes: Record<string,any> = {
 		"...on PricingPercentageValue":"PricingPercentageValue"
 	},
 	Product:{
-		adjacentVariants:"ProductVariant",
 		availableForSale:"Boolean",
-		category:"TaxonomyCategory",
 		collections:"CollectionConnection",
 		compareAtPriceRange:"ProductPriceRange",
 		createdAt:"DateTime",
 		description:"String",
 		descriptionHtml:"HTML",
-		encodedVariantAvailability:"String",
-		encodedVariantExistence:"String",
 		featuredImage:"Image",
 		handle:"String",
 		id:"ID",
@@ -1980,7 +1928,6 @@ export const ReturnTypes: Record<string,any> = {
 		productType:"String",
 		publishedAt:"DateTime",
 		requiresSellingPlan:"Boolean",
-		selectedOrFirstAvailableVariant:"ProductVariant",
 		sellingPlanGroups:"SellingPlanGroupConnection",
 		seo:"SEO",
 		tags:"String",
@@ -1990,7 +1937,6 @@ export const ReturnTypes: Record<string,any> = {
 		updatedAt:"DateTime",
 		variantBySelectedOptions:"ProductVariant",
 		variants:"ProductVariantConnection",
-		variantsCount:"Count",
 		vendor:"String"
 	},
 	ProductConnection:{
@@ -2010,7 +1956,6 @@ export const ReturnTypes: Record<string,any> = {
 		values:"String"
 	},
 	ProductOptionValue:{
-		firstSelectableVariant:"ProductVariant",
 		id:"ID",
 		name:"String",
 		swatch:"ProductOptionValueSwatch"
@@ -2045,7 +1990,6 @@ export const ReturnTypes: Record<string,any> = {
 		requiresShipping:"Boolean",
 		selectedOptions:"SelectedOption",
 		sellingPlanAllocations:"SellingPlanAllocationConnection",
-		shopPayInstallmentsPricing:"ShopPayInstallmentsProductVariantPricing",
 		sku:"String",
 		storeAvailability:"StoreAvailabilityConnection",
 		taxable:"Boolean",
@@ -2122,7 +2066,6 @@ export const ReturnTypes: Record<string,any> = {
 		page:"Page",
 		pageByHandle:"Page",
 		pages:"PageConnection",
-		paymentSettings:"PaymentSettings",
 		predictiveSearch:"PredictiveSearchResult",
 		product:"Product",
 		productByHandle:"Product",
@@ -2133,7 +2076,6 @@ export const ReturnTypes: Record<string,any> = {
 		publicApiVersions:"ApiVersion",
 		search:"SearchResultItemConnection",
 		shop:"Shop",
-		sitemap:"Sitemap",
 		urlRedirects:"UrlRedirectConnection"
 	},
 	SEO:{
@@ -2295,35 +2237,8 @@ export const ReturnTypes: Record<string,any> = {
 		refundPolicy:"ShopPolicy",
 		shippingPolicy:"ShopPolicy",
 		shipsToCountries:"CountryCode",
-		shopPayInstallmentsPricing:"ShopPayInstallmentsPricing",
 		subscriptionPolicy:"ShopPolicyWithDefault",
 		termsOfService:"ShopPolicy"
-	},
-	ShopPayInstallmentsFinancingPlan:{
-		id:"ID",
-		maxPrice:"MoneyV2",
-		minPrice:"MoneyV2",
-		terms:"ShopPayInstallmentsFinancingPlanTerm"
-	},
-	ShopPayInstallmentsFinancingPlanTerm:{
-		apr:"Int",
-		frequency:"ShopPayInstallmentsFinancingPlanFrequency",
-		id:"ID",
-		installmentsCount:"Count",
-		loanType:"ShopPayInstallmentsLoan"
-	},
-	ShopPayInstallmentsPricing:{
-		financingPlans:"ShopPayInstallmentsFinancingPlan",
-		maxPrice:"MoneyV2",
-		minPrice:"MoneyV2"
-	},
-	ShopPayInstallmentsProductVariantPricing:{
-		available:"Boolean",
-		eligible:"Boolean",
-		fullPrice:"MoneyV2",
-		id:"ID",
-		installmentsCount:"Count",
-		pricePerTerm:"MoneyV2"
 	},
 	ShopPayPaymentRequest:{
 		deliveryMethods:"ShopPayPaymentRequestDeliveryMethod",
@@ -2426,33 +2341,6 @@ export const ReturnTypes: Record<string,any> = {
 		title:"String",
 		url:"URL"
 	},
-	Sitemap:{
-		pagesCount:"Count",
-		resources:"PaginatedSitemapResources"
-	},
-	SitemapImage:{
-		alt:"String",
-		filepath:"String",
-		updatedAt:"DateTime"
-	},
-	SitemapResource:{
-		handle:"String",
-		image:"SitemapImage",
-		title:"String",
-		updatedAt:"DateTime"
-	},
-	SitemapResourceInterface:{
-		"...on SitemapResource": "SitemapResource",
-		"...on SitemapResourceMetaobject": "SitemapResourceMetaobject",
-		handle:"String",
-		updatedAt:"DateTime"
-	},
-	SitemapResourceMetaobject:{
-		handle:"String",
-		onlineStoreUrlHandle:"String",
-		type:"String",
-		updatedAt:"DateTime"
-	},
 	StoreAvailability:{
 		available:"Boolean",
 		location:"Location",
@@ -2496,11 +2384,6 @@ export const ReturnTypes: Record<string,any> = {
 	Swatch:{
 		color:"Color",
 		image:"MediaImage"
-	},
-	TaxonomyCategory:{
-		ancestors:"TaxonomyCategory",
-		id:"ID",
-		name:"String"
 	},
 	Trackable:{
 		"...on Article": "Article",

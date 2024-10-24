@@ -26,7 +26,7 @@
     "class-variance-authority": "^0.7.0",
     "gsap": "^3.12.5",
     "lucide-react": "^0.453.0",
-    "next": "^13.3.0",
+    "next": "^14.2.16",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.0"
@@ -36,7 +36,7 @@
     "@heroicons/react": "^2.0.16",
     "@maxvien/next": "^1.0.0",
     "@maxvien/shopify": "^1.0.1",
-    "@shopify/hydrogen-react": "^2023.1.7",
+    "@shopify/hydrogen-react": "^2024.7.6",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.14.1",
     "@types/react": "^18.0.28",
